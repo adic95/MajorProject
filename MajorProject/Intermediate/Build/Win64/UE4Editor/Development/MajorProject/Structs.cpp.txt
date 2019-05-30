@@ -1,0 +1,2 @@
+D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
+D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\Helper\Structs.h
