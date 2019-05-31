@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	UPackage* Z_Construct_UPackage__Script_MajorProject();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Move();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
@@ -30,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		UClass* Class = AFPSPlayerPawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Move", &AFPSPlayerPawn::execMove },
+			{ "RotateCamera", &AFPSPlayerPawn::execRotateCamera },
 			{ "ShootCamera", &AFPSPlayerPawn::execShootCamera },
 			{ "ShootWeapon", &AFPSPlayerPawn::execShootWeapon },
 		};
@@ -66,6 +68,40 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics
+	{
+		struct FPSPlayerPawn_eventRotateCamera_Parms
+		{
+			FVector2D Rotate;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotate;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::NewProp_Rotate = { "Rotate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FPSPlayerPawn_eventRotateCamera_Parms, Rotate), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::NewProp_Rotate,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\nrotate camera\n</summary>\n<param name=\"Rotate\">rotation value (x = yaw, y = pitch)</param>" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "RotateCamera", sizeof(FPSPlayerPawn_eventRotateCamera_Parms), Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -162,6 +198,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFPSPlayerPawn_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_Move, "Move" }, // 510654517
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera, "RotateCamera" }, // 1569405759
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera, "ShootCamera" }, // 2284864003
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon, "ShootWeapon" }, // 3628987176
 	};
@@ -258,7 +295,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerPawn, 119359945);
+	IMPLEMENT_CLASS(AFPSPlayerPawn, 1714149351);
 	template<> MAJORPROJECT_API UClass* StaticClass<AFPSPlayerPawn>()
 	{
 		return AFPSPlayerPawn::StaticClass();

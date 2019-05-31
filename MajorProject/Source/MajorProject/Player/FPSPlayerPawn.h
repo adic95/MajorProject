@@ -92,7 +92,7 @@ public:
 		/// </summary>
 		void ShootWeapon();
 
-	//UFUNCTION(BlueprintCallable, Category = "Player")
+	UFUNCTION(BlueprintCallable, Category = "Player")
 		/// <summary>
 		/// rotate camera
 		/// </summary>

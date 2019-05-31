@@ -16,6 +16,15 @@ struct FVector2D;
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_18_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execRotateCamera) \
+	{ \
+		P_GET_STRUCT(FVector2D,Z_Param_Rotate); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RotateCamera(Z_Param_Rotate); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execShootWeapon) \
 	{ \
 		P_FINISH; \
@@ -43,6 +52,15 @@ struct FVector2D;
 
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRotateCamera) \
+	{ \
+		P_GET_STRUCT(FVector2D,Z_Param_Rotate); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RotateCamera(Z_Param_Rotate); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execShootWeapon) \
 	{ \
