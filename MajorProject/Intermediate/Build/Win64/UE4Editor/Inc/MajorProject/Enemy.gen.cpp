@@ -126,10 +126,10 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData[] = {
 		{ "Category", "Enemy" },
 		{ "ModuleRelativePath", "Enemy/Enemy.h" },
-		{ "ToolTip", "<summary>\nmovement speed in bullets per second\n</summary>" },
+		{ "ToolTip", "<summary>\nRays per second\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed = { "ShootSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, ShootSpeed), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed = { "ShootSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, ShootSpeed), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -189,7 +189,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemy, 1810936537);
+	IMPLEMENT_CLASS(AEnemy, 4153038027);
 	template<> MAJORPROJECT_API UClass* StaticClass<AEnemy>()
 	{
 		return AEnemy::StaticClass();

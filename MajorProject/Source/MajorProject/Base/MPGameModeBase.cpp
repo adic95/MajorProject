@@ -15,6 +15,9 @@ AMPGameModeBase::AMPGameModeBase()
 
 void AMPGameModeBase::Tick(float DeltaTime)
 {
+
+	Super::Tick(DeltaTime);
+
 	//Gamemode logic
 
 	// if current higher than total rounds return
@@ -53,7 +56,7 @@ void AMPGameModeBase::Tick(float DeltaTime)
 		//spawn enemy
 
 		AEnemy* pEnemy = GetWorld()->SpawnActor<AEnemy>(Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyClass,
-			spawnpos, FRotator::ZeroRotator);
+			spawnpos, FRotator(0.0f,0.0f,0.0f));
 
 		//decrease Enemy Count of wave
 		Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount--;
@@ -73,14 +76,14 @@ void AMPGameModeBase::Tick(float DeltaTime)
 			m_currentWave = 1;
 		}
 
-		//if start timer is not down
-		else
-		{
-			//decrease start timer
-			Rounds[m_currentRound - 1].Waves[m_currentWave - 1].StartTime -= DeltaTime;
-		}
+		
 	}
-
+	//if start timer is not down
+	else
+	{
+		//decrease start timer
+		Rounds[m_currentRound - 1].Waves[m_currentWave - 1].StartTime -= DeltaTime;
+	}
 	
 }
 

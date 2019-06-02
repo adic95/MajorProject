@@ -39,9 +39,9 @@ public:
 	/// </summary>
 	float ShootDistance;
 
-	UPROPERTY(EditAnywhere, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 		/// <summary>
-		/// movement speed in bullets per second
+		/// Rays per second
 		/// </summary>
 		float ShootSpeed;
 
@@ -73,7 +73,7 @@ private:
 	/// <summary>
 	/// Shoot/ Strike timer in seconds
 	/// </summary>
-	float m_shootTimer;
+	float m_shootTimer = 0.0f;
 
 	/// <summary>
 	/// Move direction
@@ -88,7 +88,7 @@ private:
 
 #pragma region private function
 	/// <summary>
-	/// spawn bullet
+	/// Shoot ray
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
 	void Shoot(USceneComponent* Start);
