@@ -56,6 +56,14 @@ public:
 		/// collision capsule component
 		/// </summary>
 		UCapsuleComponent* Collision;
+	UPROPERTY(EditAnywhere, Category = "Enemy")
+	float Firerate;
+
+
+
+	float m_lastfired;
+
+	
 
 protected:
 	// Called when the game starts or when spawned
@@ -92,5 +100,7 @@ private:
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
 	void Shoot(USceneComponent* Start);
+
+
 
 };

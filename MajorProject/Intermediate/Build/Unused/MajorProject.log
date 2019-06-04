@@ -1,0 +1,28 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Adi Custovic\MajorProject_3.0).
+  Creating makefile for MajorProjectEditor (ini files are newer than makefile)
+  Parsing headers for MajorProjectEditor
+    Running UnrealHeaderTool "D:\Adi Custovic\MajorProject_3.0\MajorProject\MajorProject.uproject" "D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for MajorProjectEditor in 4.6415783 seconds
+  Failed to delete file 'D:\Adi Custovic\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject.pdb'
+      Exception: Access to the path 'D:\Adi Custovic\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject.pdb' is denied.
+  Attempting to retry...
+  Failed to delete file 'D:\Adi Custovic\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject.pdb'
+      Exception: Access to the path 'D:\Adi Custovic\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject.pdb' is denied.
+  Attempting to retry...
+  Failed to delete file 'D:\Adi Custovic\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject.pdb'
+      Exception: Access to the path 'D:\Adi Custovic\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject.pdb' is denied.
+EXEC : error : Exhausted all retries!
+  Using Visual Studio 2017 14.13.26128 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.13.26128) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 7 actions with 8 processes...
+    [1/7] MajorProject.init.gen.cpp
+    [2/7] Enemy.gen.cpp
+    [3/7] MPGameModeBase.cpp
+    [4/7] Enemy.cpp
+    [5/7] UE4Editor-MajorProject-0005.lib
+       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0005.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0005.exp
+    [6/7] UE4Editor-MajorProject-0005.dll
+       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0005.suppressed.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0005.suppressed.exp
+    [7/7] MajorProjectEditor.target
+  Total time in Parallel executor: 9.61 seconds
+  Total execution time: 17.94 seconds
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): error MSB3073: The command ""C:\Program Files\Epic Games\UE_4.22\Engine\Build\BatchFiles\Build.bat" MajorProjectEditor Win64 Development -Project="D:\Adi Custovic\MajorProject_3.0\MajorProject\MajorProject.uproject" -WaitMutex -FromMsBuild" exited with code -1.

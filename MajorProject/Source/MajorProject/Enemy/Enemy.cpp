@@ -82,14 +82,17 @@ void AEnemy::Tick(float DeltaTime)
 		m_dir = FVector::ZeroVector;
 
 		//increase Shoot timer
-		m_shootTimer += DeltaTime;
+		//m_shootTimer += DeltaTime;
 
 		//if shoot timer under 1/ ShootSpeed return
-		if (m_shootTimer < 1 / ShootSpeed)
-			return;
+		/*if (m_shootTimer < 1 / ShootSpeed)
+			return;*/
 		
-		LOG("Shoot RAY", 5.f);
+		if (m_lastfired > 0)
+			m_lastfired -= DeltaTime;
+		
 
+		
 		//reset shoot timer
 		m_shootTimer = 0.0f;
 
@@ -124,13 +127,20 @@ void AEnemy::Tick(float DeltaTime)
 
 void AEnemy::ShootFromMesh()
 {
-	Shoot(Mesh);
+	Shoot(Collision);
 }
 
 void AEnemy::Shoot(USceneComponent* Start)
 {
+	if (m_lastfired > 0 || (pPlayer->GetActorLocation() - GetActorLocation()).Size() >= ShootDistance)
+		return;
+
 	FHitResult hit;
 	FCollisionQueryParams params;
 	DrawDebugLine(GetWorld(), Start->GetComponentLocation(), Start->GetComponentLocation() + (1000.f * Start->GetForwardVector()), FColor::Green, false, 1, 0, 1);
+	m_lastfired = m_firerate;
+	LOG("Shoot RAY", 5.f);
+
+
 }
 

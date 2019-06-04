@@ -2,8 +2,8 @@
 
 
 #include "MPGameModeBase.h"
-#include "\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\Enemy\Enemy.h"
-#include "\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\Spawnpoints\EnemySpawnPoint.h"
+#include "Enemy\Enemy.h"
+#include "Spawnpoints\EnemySpawnPoint.h"
 
 #include "Engine.h"
 #include "EngineUtils.h" 

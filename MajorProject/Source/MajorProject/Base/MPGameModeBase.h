@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\Helper\Structs.h"
+#include "Helper\Structs.h"
 #include "MPGameModeBase.generated.h"
 
 /**

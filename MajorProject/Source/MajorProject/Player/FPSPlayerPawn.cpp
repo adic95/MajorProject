@@ -6,7 +6,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Kismet/GameplayStatics.h" 
-
+#include "Engine/World.h"
 #pragma region helper include for line tracing
 #include "DrawDebugHelpers.h"
 #pragma endregion
@@ -53,7 +53,7 @@ void AFPSPlayerPawn::Tick(float DeltaTime)
 void AFPSPlayerPawn::Move(FVector2D Movement)
 {
 	// Calculate Player Movement by Vector Parameter and movement Speed
-	FVector move;
+	FVector move = FVector::ZeroVector;
 	move += Camera->GetForwardVector() * Movement.Y * UGameplayStatics::GetWorldDeltaSeconds(GetWorld()) * MovementSpeed;
 	move += Camera->GetRightVector() * Movement.X * UGameplayStatics::GetWorldDeltaSeconds(GetWorld()) * MovementSpeed;
 
