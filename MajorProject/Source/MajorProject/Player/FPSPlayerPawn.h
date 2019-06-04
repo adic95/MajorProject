@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "FPSPlayerPawn.generated.h"
 
+
 #pragma region forward decleration
 class UCameraComponent;
 class UCapsuleComponent;
