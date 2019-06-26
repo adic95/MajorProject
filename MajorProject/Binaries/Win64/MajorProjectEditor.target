@@ -9,9 +9,9 @@
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 22,
-		"PatchVersion": 2,
-		"Changelist": 6574378,
-		"CompatibleChangelist": 5660361,
+		"PatchVersion": 0,
+		"Changelist": 5660361,
+		"CompatibleChangelist": 0,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 1,
 		"BranchName": "++UE4+Release-4.22",
@@ -1856,7 +1856,7 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor.version",
+			"Path": "$(EngineDir)/Binaries/Win64/Binaries/Win64/UE4Editor.version",
 			"Type": "RequiredResource"
 		},
 		{
@@ -4679,10 +4679,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/ARM/Win32/astcenc.exe",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Binaries/ThirdParty/libsndfile/Win64/libsndfile-1.dll",
 			"Type": "NonUFS"
 		},
 		{

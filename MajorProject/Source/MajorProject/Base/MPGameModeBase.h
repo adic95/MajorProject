@@ -10,6 +10,8 @@
 /**
  * 
  */
+
+class AWeapon;
 UCLASS()
 class MAJORPROJECT_API AMPGameModeBase : public AGameModeBase
 {
@@ -44,6 +46,9 @@ public:
 		/// </summary>
 
 		bool RiftActive;
+	///declare Array of Subclasses of Weapons for weapon stash
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon")
+		TArray <TSubclassOf<AWeapon>> WeaponClass;
 #pragma endregion
 
 protected:
@@ -77,6 +82,10 @@ private:
 	/// all enemy spawn positions
 	/// </summary>
 	TArray<FVector> m_spawnPos;
+
+	// Spawnpoint position of Weapon Stash
+	FVector m_weaponSpawnpos;
+
 #pragma endregion
 };
 	

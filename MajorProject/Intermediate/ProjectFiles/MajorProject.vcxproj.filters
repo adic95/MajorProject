@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MajorProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{AB167DC7-7418-4426-A706-B0C60B23A164}</UniqueIdentifier>
+      <UniqueIdentifier>{207DB1C4-60D3-48A7-9E2A-FF3F3087A7F5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MajorProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{94DF31C7-9464-46A7-94B0-702145D9BA92}</UniqueIdentifier>
+      <UniqueIdentifier>{390D6100-44B5-4E09-9147-B3F2D9425048}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MajorProject">
-      <UniqueIdentifier>{7BD67801-9372-4A1B-9DB8-1FA4E9D25233}</UniqueIdentifier>
+      <UniqueIdentifier>{C4E02FC0-34EB-4898-8A0D-25A656F4209D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MajorProject\MajorProject.Build.cs">
       <Filter>Source\MajorProject</Filter>
@@ -39,7 +39,7 @@
       <Filter>Source\MajorProject</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Base">
-      <UniqueIdentifier>{25163439-445E-415A-9945-BD3D67F45528}</UniqueIdentifier>
+      <UniqueIdentifier>{2C0B5F17-E722-4F2D-A265-CF1B5DE7538A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Base\MPGameModeBase.cpp">
       <Filter>Source\MajorProject\Base</Filter>
@@ -48,7 +48,7 @@
       <Filter>Source\MajorProject\Base</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Enemy">
-      <UniqueIdentifier>{16417409-2EDE-4F2D-94C7-E5D8F9DE78D6}</UniqueIdentifier>
+      <UniqueIdentifier>{2CCA88F7-EB22-4AFF-BFBA-4E16C5511CED}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Enemy\Enemy.cpp">
       <Filter>Source\MajorProject\Enemy</Filter>
@@ -57,13 +57,13 @@
       <Filter>Source\MajorProject\Enemy</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Helper">
-      <UniqueIdentifier>{28BF95D6-1B37-477A-84D8-05B240152FAD}</UniqueIdentifier>
+      <UniqueIdentifier>{75149302-E800-4D48-A7ED-B941656DECE1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\MajorProject\Helper\Structs.h">
       <Filter>Source\MajorProject\Helper</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Player">
-      <UniqueIdentifier>{326E9BAD-4738-461B-8D82-29D49D035F25}</UniqueIdentifier>
+      <UniqueIdentifier>{5F7B184E-8252-4C34-A993-5A78381B3140}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Player\FPSPlayerPawn.cpp">
       <Filter>Source\MajorProject\Player</Filter>
@@ -72,13 +72,28 @@
       <Filter>Source\MajorProject\Player</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Spawnpoints">
-      <UniqueIdentifier>{EB1124D9-4111-443D-8CEB-D1A2148DA5F2}</UniqueIdentifier>
+      <UniqueIdentifier>{C45FC7B4-E589-4B7E-B0B3-30C1EADC2C15}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Spawnpoints\EnemySpawnPoint.cpp">
       <Filter>Source\MajorProject\Spawnpoints</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MajorProject\Spawnpoints\EnemySpawnPoint.h">
       <Filter>Source\MajorProject\Spawnpoints</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MajorProject\Spawnpoints\WeaponSpawnPoint.cpp">
+      <Filter>Source\MajorProject\Spawnpoints</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MajorProject\Spawnpoints\WeaponSpawnPoint.h">
+      <Filter>Source\MajorProject\Spawnpoints</Filter>
+    </ClInclude>
+    <Filter Include="Source\MajorProject\Weapon">
+      <UniqueIdentifier>{1FC77DC9-1A28-46DE-8ED1-8F80D828823E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MajorProject\Weapon\Weapon.cpp">
+      <Filter>Source\MajorProject\Weapon</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MajorProject\Weapon\Weapon.h">
+      <Filter>Source\MajorProject\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

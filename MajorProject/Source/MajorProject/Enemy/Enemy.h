@@ -56,8 +56,9 @@ public:
 		/// collision capsule component
 		/// </summary>
 		UCapsuleComponent* Collision;
+	
 	UPROPERTY(EditAnywhere, Category = "Enemy")
-	float Firerate;
+	float m_firerate;
 
 
 

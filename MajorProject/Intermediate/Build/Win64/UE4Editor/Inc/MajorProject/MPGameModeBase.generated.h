@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MAJORPROJECT_MPGameModeBase_generated_h
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_RPC_WRAPPERS
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_INCLASS_NO_PURE_DECLS \
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMPGameModeBase(); \
 	friend struct Z_Construct_UClass_AMPGameModeBase_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(AMPGameModeBase)
 
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_INCLASS \
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesAMPGameModeBase(); \
 	friend struct Z_Construct_UClass_AMPGameModeBase_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(AMPGameModeBase)
 
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_STANDARD_CONSTRUCTORS \
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMPGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMPGameModeBase) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_ENHANCED_CONSTRUCTORS \
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMPGameModeBase(AMPGameModeBase&&); \
@@ -57,26 +57,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMPGameModeBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMPGameModeBase)
 
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_PRIVATE_PROPERTY_OFFSET
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_13_PROLOG
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_GENERATED_BODY_LEGACY \
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_PRIVATE_PROPERTY_OFFSET
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_15_PROLOG
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_RPC_WRAPPERS \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_INCLASS \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_STANDARD_CONSTRUCTORS \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_PRIVATE_PROPERTY_OFFSET \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_INCLASS \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_GENERATED_BODY \
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_INCLASS_NO_PURE_DECLS \
-	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_16_ENHANCED_CONSTRUCTORS \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_PRIVATE_PROPERTY_OFFSET \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_INCLASS_NO_PURE_DECLS \
+	MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

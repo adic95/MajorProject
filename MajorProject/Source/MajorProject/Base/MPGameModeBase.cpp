@@ -4,8 +4,10 @@
 #include "MPGameModeBase.h"
 #include "Enemy\Enemy.h"
 #include "Spawnpoints\EnemySpawnPoint.h"
+#include "Spawnpoints\WeaponSpawnPoint.h"
+#include "Weapon\Weapon.h"
 
-#include "Engine.h"
+//#include "Engine.h"
 #include "EngineUtils.h" 
 
 AMPGameModeBase::AMPGameModeBase()
@@ -60,6 +62,23 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 		//decrease Enemy Count of wave
 		Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount--;
+		
+		//Spawn random element of weapons array at Spawnpoint position
+		AWeapon* pWeapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass[FMath::RandRange(0, WeaponClass.Num() -1)],m_weaponSpawnpos, FRotator::ZeroRotator);
+		
+		//---------------------------DEBUG-------------------------------------------------
+		if (pWeapon != nullptr)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Blue,TEXT(" Weapon Spawned"));
+		}
+
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(50, 2, FColor::Blue, TEXT(" Weapon not Spawned"));
+
+		}
+		//---------------------------------DEBUG-----------------------------------------------
+
 
 		// if enemy count higher than zero return
 		if (Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount > 0)
@@ -75,6 +94,11 @@ void AMPGameModeBase::Tick(float DeltaTime)
 			m_currentRound++;
 			m_currentWave = 1;
 		}
+
+
+
+		
+		
 
 		
 	}
@@ -95,5 +119,15 @@ void AMPGameModeBase::BeginPlay()
 	{
 		//add position to Vector array
 		m_spawnPos.Add(ActorItr->GetActorLocation());
+
 	}
+
+	// get position of all weapon Spawnpoints in scene and store in variable
+	for (TActorIterator<AWeaponSpawnPoint> ActorItr(GetWorld()); ActorItr; ++ActorItr) 
+	{
+		m_weaponSpawnpos = ActorItr->GetActorLocation();
+	}
+	
+	
+
 }
