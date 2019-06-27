@@ -102,10 +102,25 @@ void AFPSPlayerPawn::RotateCamera(FVector2D Rotate)
 
 void AFPSPlayerPawn::Shoot(USceneComponent* Start)
 {
+	//creat hit result variable
 	FHitResult hit;
-	FCollisionQueryParams params;
+	//creating collision params and ignoring the player
+	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")),false,this);
+	//Draw ray for debug purposes
 	DrawDebugLine(GetWorld(), Start->GetComponentLocation(), Start->GetComponentLocation() + (1000.f * Start->GetForwardVector()), FColor::Green, false, 1, 0, 1);
-	//GetWorld()->LineTraceSingleByChannel(hit, Start->GetComponentLocation(), Start->GetComponentLocation() + (1000.0f * Start->GetForwardVector()), ECC_Visibility, params);
+	//acutual line trace code and store in bool
+	bool isHit= GetWorld()->LineTraceSingleByChannel(hit, Start->GetComponentLocation(), Start->GetComponentLocation() + (1000.0f * Start->GetForwardVector()), ECC_Visibility, params);
+
+	//if ray was sucessfully shot
+	if (isHit)
+	{
+		//if ray hit object with a collision component
+		if (hit.bBlockingHit)
+		{
+			//log this message
+			GEngine->AddOnScreenDebugMessage(100, 3, FColor::Emerald,FString::Printf(TEXT("Hit!")));
+		}
+	}
 }
 
 // Called to bind functionality to input
