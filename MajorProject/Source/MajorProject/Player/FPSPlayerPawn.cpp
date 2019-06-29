@@ -115,7 +115,7 @@ void AFPSPlayerPawn::Shoot(USceneComponent* Start)
 	if (isHit)
 	{
 		//if ray hit object with a collision component
-		if (hit.bBlockingHit)
+		if (hit.Actor->ActorHasTag("Enemy"))
 		{
 			//log this message
 			GEngine->AddOnScreenDebugMessage(100, 3, FColor::Emerald,FString::Printf(TEXT("Hit!")));

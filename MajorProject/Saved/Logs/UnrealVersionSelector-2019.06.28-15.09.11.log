@@ -1,0 +1,44 @@
+AndroidPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.AndroidPlatformSDK has no valid SDK
+IOSPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.IOSPlatformSDK has no valid SDK
+HTML5PlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.HTML5PlatformSDK using manually installed SDK
+LinuxPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.LinuxPlatformSDK has no valid SDK
+WindowsPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.WindowsPlatformSDK using manually installed SDK
+ProjectFileGenerator.GenerateProjectFiles: Discovering modules, targets and source code for project...
+WindowsPlatform.FindVSInstallDirs: Found Visual Studio installation: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community (Product=Microsoft.VisualStudio.Product.Community, Version=15.9.28307.665, Sort=0)
+WindowsPlatform.GetDefaultCompiler: WARNING: Visual Studio 2017 is installed, but is missing the C++ toolchain. Please verify that the "VC++ 2017 toolset" component is selected in the Visual Studio 2017 installation options.
+UnrealBuildTool.Main: ERROR: Visual Studio 2017 must be installed in order to build this target.
+UnrealBuildTool.Main: BuildException: Visual Studio 2017 must be installed in order to build this target.
+UnrealBuildTool.Main:    bei UnrealBuildTool.VCEnvironment.Create(WindowsCompiler Compiler, CppPlatform Platform, String CompilerVersion, String WindowsSdkVersion) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\Platform\Windows\VCEnvironment.cs:Zeile 511.
+UnrealBuildTool.Main:    bei UnrealBuildTool.WindowsPlatform.ValidateTarget(TargetRules Target) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\Platform\Windows\UEBuildWindows.cs:Zeile 597.
+UnrealBuildTool.Main:    bei UnrealBuildTool.RulesAssembly.CreateTargetRulesInstance(String TypeName, TargetInfo TargetInfo, CommandLineArguments Arguments) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\System\RulesAssembly.cs:Zeile 520.
+UnrealBuildTool.Main:    bei UnrealBuildTool.RulesAssembly.CreateTargetRules(String TargetName, UnrealTargetPlatform Platform, UnrealTargetConfiguration Configuration, String Architecture, FileReference ProjectFile, CommandLineArguments Arguments) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\System\RulesAssembly.cs:Zeile 580.
+UnrealBuildTool.Main:    bei UnrealBuildTool.ProjectFileGenerator.AddProjectsForAllTargets(PlatformProjectGeneratorCollection PlatformProjectGenerators, List`1 AllGames, ProjectFile& EngineProject, ProjectFile& EnterpriseProject, List`1& GameProjects, Dictionary`2& ProgramProjects) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\ProjectFiles\ProjectFileGenerator.cs:Zeile 2109.
+UnrealBuildTool.Main:    bei UnrealBuildTool.ProjectFileGenerator.GenerateProjectFiles(PlatformProjectGeneratorCollection PlatformProjectGenerators, String[] Arguments) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\ProjectFiles\ProjectFileGenerator.cs:Zeile 674.
+UnrealBuildTool.Main:    bei UnrealBuildTool.GenerateProjectFilesMode.Execute(CommandLineArguments Arguments) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\Modes\GenerateProjectFilesMode.cs:Zeile 172.
+UnrealBuildTool.Main:    bei UnrealBuildTool.UnrealBuildTool.Main(String[] ArgumentsArray) in D:\Build\++UE4\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.cs:Zeile 443.
+Timeline.Print: Timeline:
+Timeline.Print: 
+Timeline.Print: [ 0.000]
+Timeline.Print: [ 0.000](+0.064) <unknown>
+Timeline.Print: [ 0.064](+0.395) XmlConfig.ReadConfigFiles()
+Timeline.Print: [ 0.460](+0.000) SingleInstanceMutex.Acquire()
+Timeline.Print: [ 0.460](+0.190) UEBuildPlatform.RegisterPlatforms()
+Timeline.Print:   0.462          [ 0.001](+0.095) Initializing InstalledPlatformInfo
+Timeline.Print:   0.557          [ 0.096](+0.000) Querying types
+Timeline.Print:   0.560          [ 0.100](+0.003) MacPlatformFactory
+Timeline.Print:   0.564          [ 0.103](+0.000) TVOSPlatformFactory
+Timeline.Print:   0.564          [ 0.104](+0.023) AndroidPlatformFactory
+Timeline.Print:   0.588          [ 0.128](+0.034) IOSPlatformFactory
+Timeline.Print:   0.622          [ 0.162](+0.016) HTML5PlatformFactory
+Timeline.Print:   0.639          [ 0.179](+0.005) LinuxPlatformFactory
+Timeline.Print:   0.645          [ 0.184](+0.000) LuminPlatformFactory
+Timeline.Print:   0.645          [ 0.185](+0.005) WindowsPlatformFactory
+Timeline.Print: [ 0.651](+2.014) <unknown>
+Timeline.Print: [ 2.665](+0.003) Finding engine modules
+Timeline.Print: [ 2.669](+0.006) Finding plugin modules
+Timeline.Print: [ 2.676](+0.264) <unknown>
+Timeline.Print: [ 2.940](+0.000) Finding program modules
+Timeline.Print: [ 2.941](+0.000) Finding program targets
+Timeline.Print: [ 2.941](+0.123) <unknown>
+Timeline.Print: [ 3.064](+0.000) FileMetadataPrefetch.Stop()
+Timeline.Print: [ 3.067]

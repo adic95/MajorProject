@@ -1,10 +1,15 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Projekte\MajorProject_3.0).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Adi\Desktop\MajorProject_3.0).
   Creating makefile for MajorProjectEditor (ini files are newer than makefile)
   Parsing headers for MajorProjectEditor
-    Running UnrealHeaderTool "D:\Projekte\MajorProject_3.0\MajorProject\MajorProject.uproject" "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for MajorProjectEditor in 6,4193468 seconds
-  Using Visual Studio 2019 14.21.27702 toolchain (D:\Programms\VS\VC\Tools\MSVC\14.21.27702) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 1 action with 12 processes...
-    [1/1] MajorProjectEditor.target
-  Total time in Parallel executor: 0,15 seconds
-  Total execution time: 7,98 seconds
+    Running UnrealHeaderTool "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\MajorProject.uproject" "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for MajorProjectEditor in 20,1914424 seconds
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 8 processes...
+    [1/4] FPSPlayerPawn.cpp
+    [2/4] UE4Editor-MajorProject-0001.lib
+       Bibliothek "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.lib" und Objekt "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.exp" werden erstellt.
+    [3/4] UE4Editor-MajorProject-0001.dll
+       Bibliothek "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.suppressed.lib" und Objekt "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.suppressed.exp" werden erstellt.
+    [4/4] MajorProjectEditor.target
+  Total time in Parallel executor: 8,78 seconds
+  Total execution time: 33,43 seconds
