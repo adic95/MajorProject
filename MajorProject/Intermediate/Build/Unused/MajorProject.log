@@ -1,15 +1,23 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Adi\Desktop\MajorProject_3.0).
-  Creating makefile for MajorProjectEditor (ini files are newer than makefile)
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Projekte\MajorProject_3.0).
   Parsing headers for MajorProjectEditor
-    Running UnrealHeaderTool "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\MajorProject.uproject" "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for MajorProjectEditor in 20,1914424 seconds
-  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 8 processes...
-    [1/4] FPSPlayerPawn.cpp
-    [2/4] UE4Editor-MajorProject-0001.lib
-       Bibliothek "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.lib" und Objekt "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.exp" werden erstellt.
-    [3/4] UE4Editor-MajorProject-0001.dll
-       Bibliothek "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.suppressed.lib" und Objekt "C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.suppressed.exp" werden erstellt.
-    [4/4] MajorProjectEditor.target
-  Total time in Parallel executor: 8,78 seconds
-  Total execution time: 33,43 seconds
+    Running UnrealHeaderTool "D:\Projekte\MajorProject_3.0\MajorProject\MajorProject.uproject" "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for MajorProjectEditor in 4,6347402 seconds
+  Using Visual Studio 2019 14.21.27702 toolchain (D:\Programms\VS\VC\Tools\MSVC\14.21.27702) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 6 actions with 12 processes...
+    [1/6] MajorProject.init.gen.cpp
+    [2/6] VRPlayerPawn.cpp
+    [3/6] VRPlayerPawn.gen.cpp
+    [4/6] UE4Editor-MajorProject-0002.lib
+       Bibliothek "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0002.lib" und Objekt "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0002.exp" werden erstellt.
+    [5/6] UE4Editor-MajorProject-0002.dll
+       Bibliothek "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0002.suppressed.lib" und Objekt "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0002.suppressed.exp" werden erstellt.
+VRPlayerPawn.cpp.obj : error LNK2001: Nicht aufgel÷stes externes Symbol ""public: virtual void __cdecl AVRPlayerPawn::Tick(float)" (?Tick@AVRPlayerPawn@@UEAAXM@Z)".
+VRPlayerPawn.gen.cpp.obj : error LNK2001: Nicht aufgel÷stes externes Symbol ""public: virtual void __cdecl AVRPlayerPawn::Tick(float)" (?Tick@AVRPlayerPawn@@UEAAXM@Z)".
+VRPlayerPawn.cpp.obj : error LNK2019: Verweis auf nicht aufgel÷stes externes Symbol ""public: void __cdecl AVRPlayerPawn::SetWeaponTransform(struct FTransform)" (?SetWeaponTransform@AVRPlayerPawn@@QEAAXUFTransform@@@Z)" in Funktion ""public: static void __cdecl AVRPlayerPawn::execSetWeaponTransform(class UObject *,struct FFrame &,void * const)" (?execSetWeaponTransform@AVRPlayerPawn@@SAXPEAVUObject@@AEAUFFrame@@QEAX@Z)".
+VRPlayerPawn.gen.cpp.obj : error LNK2001: Nicht aufgel÷stes externes Symbol ""public: void __cdecl AVRPlayerPawn::SetWeaponTransform(struct FTransform)" (?SetWeaponTransform@AVRPlayerPawn@@QEAAXUFTransform@@@Z)".
+VRPlayerPawn.cpp.obj : error LNK2019: Verweis auf nicht aufgel÷stes externes Symbol ""public: void __cdecl AVRPlayerPawn::ParentWeapon(class USceneComponent *)" (?ParentWeapon@AVRPlayerPawn@@QEAAXPEAVUSceneComponent@@@Z)" in Funktion ""public: static void __cdecl AVRPlayerPawn::execParentWeapon(class UObject *,struct FFrame &,void * const)" (?execParentWeapon@AVRPlayerPawn@@SAXPEAVUObject@@AEAUFFrame@@QEAX@Z)".
+VRPlayerPawn.gen.cpp.obj : error LNK2001: Nicht aufgel÷stes externes Symbol ""public: void __cdecl AVRPlayerPawn::ParentWeapon(class USceneComponent *)" (?ParentWeapon@AVRPlayerPawn@@QEAAXPEAVUSceneComponent@@@Z)".
+VRPlayerPawn.cpp.obj : error LNK2001: Nicht aufgel÷stes externes Symbol ""protected: virtual void __cdecl AVRPlayerPawn::BeginPlay(void)" (?BeginPlay@AVRPlayerPawn@@MEAAXXZ)".
+VRPlayerPawn.gen.cpp.obj : error LNK2001: Nicht aufgel÷stes externes Symbol ""protected: virtual void __cdecl AVRPlayerPawn::BeginPlay(void)" (?BeginPlay@AVRPlayerPawn@@MEAAXXZ)".
+D:\Projekte\MajorProject_3.0\MajorProject\Binaries\Win64\UE4Editor-MajorProject-0002.dll : fatal error LNK1120: 4 nicht aufgel÷ste Externe
+D:\Programms\VS\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(44,5): error MSB3075: Der Befehl "D:\Programms\UE_4.22\Engine\Build\BatchFiles\Build.bat MajorProjectEditor Win64 Development -Project="D:\Projekte\MajorProject_3.0\MajorProject\MajorProject.uproject" -WaitMutex -FromMsBuild" wurde mit dem Code 5 beendet. Stellen Sie sicher, dass Sie zur Ausführung dieses Befehls berechtigt sind.

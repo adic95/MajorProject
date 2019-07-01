@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MajorProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{386948A1-6813-4C1A-A7AC-C52333568E9E}</UniqueIdentifier>
+      <UniqueIdentifier>{703ED0F3-3E78-422E-AB71-B841A19D3F23}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MajorProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{103E1C55-CE7A-463B-91D7-045F47FB405B}</UniqueIdentifier>
+      <UniqueIdentifier>{870DFB49-AB9F-48A9-9FA3-EC34BC3E590E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MajorProject">
-      <UniqueIdentifier>{34BFCF9E-4187-4C3B-A5FE-E3FEF14BA404}</UniqueIdentifier>
+      <UniqueIdentifier>{FC57B56E-DDD7-49C4-B2F3-4F9E23122E79}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MajorProject\MajorProject.Build.cs">
       <Filter>Source\MajorProject</Filter>
@@ -39,7 +39,7 @@
       <Filter>Source\MajorProject</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Base">
-      <UniqueIdentifier>{EC83A129-F31F-4105-AEB0-3E6ED2149D14}</UniqueIdentifier>
+      <UniqueIdentifier>{4F8BE5CF-02C7-4A29-865A-E9E2454282DF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Base\MPGameModeBase.cpp">
       <Filter>Source\MajorProject\Base</Filter>
@@ -48,7 +48,7 @@
       <Filter>Source\MajorProject\Base</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Enemy">
-      <UniqueIdentifier>{ABF5174E-5BD6-4884-81D9-B0456320E46F}</UniqueIdentifier>
+      <UniqueIdentifier>{3EFA1DC5-96EB-4040-B52D-8A2A69FFDC93}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Enemy\Enemy.cpp">
       <Filter>Source\MajorProject\Enemy</Filter>
@@ -57,13 +57,13 @@
       <Filter>Source\MajorProject\Enemy</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Helper">
-      <UniqueIdentifier>{37015309-4C57-4B8A-8F98-038A4E7B04EE}</UniqueIdentifier>
+      <UniqueIdentifier>{A47807D8-CF43-4F77-8EE5-F3A984E25EB2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\MajorProject\Helper\Structs.h">
       <Filter>Source\MajorProject\Helper</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Player">
-      <UniqueIdentifier>{E78FA618-A476-43C5-B4AC-54A067B34A50}</UniqueIdentifier>
+      <UniqueIdentifier>{C4ABEDCA-EBE6-4EDB-884A-FBCB91BBF3D7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Player\FPSPlayerPawn.cpp">
       <Filter>Source\MajorProject\Player</Filter>
@@ -71,8 +71,14 @@
     <ClInclude Include="..\..\Source\MajorProject\Player\FPSPlayerPawn.h">
       <Filter>Source\MajorProject\Player</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MajorProject\Player\VRPlayerPawn.cpp">
+      <Filter>Source\MajorProject\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MajorProject\Player\VRPlayerPawn.h">
+      <Filter>Source\MajorProject\Player</Filter>
+    </ClInclude>
     <Filter Include="Source\MajorProject\Spawnpoints">
-      <UniqueIdentifier>{B0284A3D-1207-4AFA-9E40-BED29D910211}</UniqueIdentifier>
+      <UniqueIdentifier>{C1B848CC-9288-418C-9BE7-3A6ED578B50B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Spawnpoints\EnemySpawnPoint.cpp">
       <Filter>Source\MajorProject\Spawnpoints</Filter>
@@ -87,7 +93,7 @@
       <Filter>Source\MajorProject\Spawnpoints</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Weapon">
-      <UniqueIdentifier>{76323ACF-5428-400D-81A3-4FEDF3D30DBD}</UniqueIdentifier>
+      <UniqueIdentifier>{6E0D8C84-4A48-4625-9885-2BCC44FABB6C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Weapon\Weapon.cpp">
       <Filter>Source\MajorProject\Weapon</Filter>

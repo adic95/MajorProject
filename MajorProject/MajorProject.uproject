@@ -16,7 +16,7 @@
 	"Plugins": [
 		{
 			"Name": "PathFollow",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7c19d00ad42a4b67972eea383dedb7f3"
 		}
 	]

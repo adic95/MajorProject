@@ -1,7 +1,7 @@
-C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
-c:\users\adi\desktop\majorproject_3.0\majorproject\source\majorproject\spawnpoints\EnemySpawnPoint.h
-C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\EnemySpawnPoint.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components\SphereComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
+D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\Spawnpoints\EnemySpawnPoint.h
+D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\EnemySpawnPoint.generated.h
+D:\Programms\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components\SphereComponent.h
+D:\Programms\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\Programms\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\Programms\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
