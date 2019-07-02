@@ -30,6 +30,8 @@ AFPSPlayerPawn::AFPSPlayerPawn()
 	Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Collsion"));
 	Collision->SetupAttachment(Camera);
 
+	Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+	Mesh->SetupAttachment(Camera);
 	//add tags
 	Tags.Add("Player");
 
@@ -79,7 +81,7 @@ void AFPSPlayerPawn::ShootCamera()
 
 void AFPSPlayerPawn::ShootWeapon()
 {
-
+	Shoot(Mesh);
 }
 
 //rotate Camera

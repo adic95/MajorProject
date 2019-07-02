@@ -63,7 +63,7 @@ public:
 		/// collision capsule component
 		/// </summary>
 		UCapsuleComponent* Collision;
-
+	
 	UPROPERTY(EditAnywhere, Category = "Player")
 		/// <summary>
 		/// skeletal mesh component
