@@ -1,2 +1,2 @@
-D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
-D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\MajorProject.h
+C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
+c:\users\adi\desktop\majorproject_3.0\majorproject\source\majorproject\MajorProject.h

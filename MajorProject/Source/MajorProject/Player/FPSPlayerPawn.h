@@ -107,6 +107,7 @@ private:
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
 	void Shoot(USceneComponent* Start);
+	void GrabFromDistance(USceneComponent* Origin);
 #pragma endregion
 
 };

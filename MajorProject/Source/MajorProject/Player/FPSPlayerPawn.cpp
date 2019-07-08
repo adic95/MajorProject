@@ -125,6 +125,38 @@ void AFPSPlayerPawn::Shoot(USceneComponent* Start)
 	}
 }
 
+void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
+{
+	//creat hit result variable
+	FHitResult hit;
+	//creating collision params and ignoring the player
+	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), false, this);
+	//Draw ray for debug purposes
+	//DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (1000.f * Origin->GetForwardVector()), FColor::Green, false, 1, 0, 1);
+	//acutual line trace code and store in bool
+	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (1000.0f * Origin->GetForwardVector()), ECC_Visibility, params);
+	FVector WeaponLocation;
+	FVector Flydir;
+	if (isHit)
+	{
+		if (hit.Actor->ActorHasTag("Weapon"))
+		{
+
+		
+
+			WeaponLocation = hit.Actor->GetActorLocation();
+			Flydir = Origin->GetComponentLocation()- WeaponLocation;
+			Flydir.Normalize();
+
+		}
+		
+			
+			
+
+
+	}
+}
+
 // Called to bind functionality to input
 /*void AFPSPlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
