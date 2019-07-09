@@ -7,6 +7,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Kismet/GameplayStatics.h" 
 #include "Engine/World.h"
+#include "Weapon\Weapon.h"
 #pragma region helper include for line tracing
 #include "DrawDebugHelpers.h"
 #pragma endregion
@@ -35,6 +36,8 @@ AFPSPlayerPawn::AFPSPlayerPawn()
 	//add tags
 	Tags.Add("Player");
 
+	MaxGrabDistance = 1000.0f;
+	GrabSpeed = 0.5f;
 
 }
 
@@ -49,6 +52,11 @@ void AFPSPlayerPawn::BeginPlay()
 void AFPSPlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (bisGrabbing)
+	{
+		UpdateGrab(DeltaTime);
+	}
 
 }
 
@@ -127,33 +135,63 @@ void AFPSPlayerPawn::Shoot(USceneComponent* Start)
 
 void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 {
+	if (bisGrabbing)
+	{
+		GEngine->AddOnScreenDebugMessage(1, 5, FColor::Emerald, FString::Printf(TEXT("Process!")));
+		return;
+	}
+
 	//creat hit result variable
 	FHitResult hit;
 	//creating collision params and ignoring the player
 	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), false, this);
 	//Draw ray for debug purposes
-	//DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (1000.f * Origin->GetForwardVector()), FColor::Green, false, 1, 0, 1);
+	DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FColor::Red, false, 1, 0, 1);
 	//acutual line trace code and store in bool
-	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (1000.0f * Origin->GetForwardVector()), ECC_Visibility, params);
+	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
 	FVector WeaponLocation;
 	FVector Flydir;
 	if (isHit)
 	{
+		GEngine->AddOnScreenDebugMessage(2, 5, FColor::Emerald, FString::Printf(TEXT("Hit!")));
+
 		if (hit.Actor->ActorHasTag("Weapon"))
 		{
+			GEngine->AddOnScreenDebugMessage(3, 5, FColor::Emerald, FString::Printf(TEXT("Weapon!")));
 
-		
-
-			WeaponLocation = hit.Actor->GetActorLocation();
-			Flydir = Origin->GetComponentLocation()- WeaponLocation;
-			Flydir.Normalize();
+			pcurrentWeapon = Cast<AWeapon>(hit.Actor);
+			//bisGrabbing = true;
+			FAttachmentTransformRules rules = FAttachmentTransformRules::SnapToTargetNotIncludingScale;
+			rules.bWeldSimulatedBodies = true;
+			pcurrentWeapon->AttachToComponent(Mesh, rules);
 
 		}
 		
-			
+				
 			
 
 
+	}
+}
+
+void AFPSPlayerPawn::UpdateGrab(float DeltaTime)
+{
+	if (!pcurrentWeapon || !bisGrabbing)
+		return;
+
+	float dist = FVector::Distance(pcurrentWeapon->GetActorLocation(), GetActorLocation());
+	float perc = dist / MaxGrabDistance;
+	perc = FMath::Clamp(perc - DeltaTime * GrabSpeed,0.0f,1.0f);
+	FVector dir = pcurrentWeapon->GetActorLocation() - GetActorLocation();
+	FVector point2 = GetActorLocation() + dir * MaxGrabDistance;
+	pcurrentWeapon->SetActorLocation(FMath::Lerp(GetActorLocation(), point2, perc));
+	
+	//GEngine->AddOnScreenDebugMessage(4, 5, FColor::Emerald, FString::Printf(TEXT(FString::SanitizeFloat(perc))));
+	if (perc == 0)
+	{
+		bisGrabbing = false;
+		pcurrentWeapon->GetRootComponent()->AttachTo((USceneComponent*)GetOwner());
+		GEngine->AddOnScreenDebugMessage(5, 5, FColor::Emerald, FString::Printf(TEXT("Done!")));
 	}
 }
 

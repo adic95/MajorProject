@@ -426,20 +426,21 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-/I C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject
-/I C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Source
-/I C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Source\MajorProject
-/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Source\MajorProject\Spawnpoints\EnemySpawnPoint.cpp"
-/FI"C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h"
-/Fo"C:\Users\Adi\Desktop\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\EnemySpawnPoint.cpp.obj"
+/I "D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject"
+/I "D:\Adi Custovic\MajorProject_3.0\MajorProject\Source"
+/I "D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject\Spawnpoints\EnemySpawnPoint.cpp"
+/FI"D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h"
+/Fo"D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\EnemySpawnPoint.cpp.obj"
 /TP
 /GR-
 /W4

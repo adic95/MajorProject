@@ -10,6 +10,7 @@
 #pragma region forward decleration
 class UCameraComponent;
 class UCapsuleComponent;
+class AWeapon;
 #pragma endregion
 
 
@@ -52,7 +53,7 @@ public:
 		/// </summary>
 		float Gravity;
 
-	UPROPERTY(EditAnywhere, Category = "Player")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player")
 		/// <summary>
 		/// camera component
 		/// </summary>
@@ -69,6 +70,19 @@ public:
 		/// skeletal mesh component
 		/// </summary>
 		USkeletalMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		/// <summary>
+		/// 
+		/// </summary>
+		float MaxGrabDistance;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		/// <summary>
+		/// 
+		/// </summary>
+		float GrabSpeed;
+
 
 
 #pragma endregion
@@ -99,6 +113,9 @@ public:
 		/// </summary>
 		/// <param name="Rotate">rotation value (x = yaw, y = pitch)</param>
 		void RotateCamera(FVector2D Rotate);
+		
+	UFUNCTION(BlueprintCallable, Category = "Player")
+		void GrabFromDistance(USceneComponent* Origin);
 #pragma endregion
 private:
 #pragma region private function
@@ -107,7 +124,10 @@ private:
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
 	void Shoot(USceneComponent* Start);
-	void GrabFromDistance(USceneComponent* Origin);
+	void UpdateGrab(float DeltaTime);
+	AWeapon* pcurrentWeapon;
+	bool bisGrabbing;
+	
 #pragma endregion
 
 };

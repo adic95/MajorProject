@@ -13,16 +13,13 @@ AWeapon::AWeapon()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// create default scene component and make it root
-	USceneComponent* pRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-	RootComponent = pRoot;
+	//USceneComponent* pRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	//RootComponent = pRoot;
 
-	// create default capsule component and attach to camera
-	Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Collision"));
-	Collision->SetupAttachment(pRoot);
-
+	
 	// create default skeletal mesh component and attach to camera
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	Mesh->SetupAttachment(pRoot);
+	//Mesh->SetupAttachment(pRoot);
 
 	// add tag
 	Tags.Add("Weapon");
