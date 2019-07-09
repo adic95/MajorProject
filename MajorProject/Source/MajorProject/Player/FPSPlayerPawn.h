@@ -11,6 +11,7 @@
 class UCameraComponent;
 class UCapsuleComponent;
 class AWeapon;
+class UMotionControllerComponent;
 #pragma endregion
 
 
@@ -70,6 +71,34 @@ public:
 		/// skeletal mesh component
 		/// </summary>
 		USkeletalMeshComponent* Mesh;
+
+
+	UPROPERTY(EditAnywhere, Category = "VR_Player")
+		/// <summary>
+		/// Left skeletal Hand mesh component
+		/// </summary>
+		USkeletalMeshComponent* LeftHandMesh;
+	
+	
+	UPROPERTY(EditAnywhere, Category = "VR_Player")
+		/// <summary>
+		/// Right skeletal Hand mesh component
+		/// </summary>
+		USkeletalMeshComponent* RightHandMesh;
+	
+	
+	UPROPERTY(EditAnywhere, Category = "VR_Player")
+		/// <summary>
+		/// Left Motion Controller  component
+		/// </summary>
+		UMotionControllerComponent* LeftController;
+	
+	UPROPERTY(EditAnywhere, Category = "VR_Player")
+		/// <summary>
+		/// Right Motion Controller component
+		/// </summary>
+		UMotionControllerComponent* RightController;
+
 
 	UPROPERTY(EditAnywhere, Category = "Player")
 		/// <summary>

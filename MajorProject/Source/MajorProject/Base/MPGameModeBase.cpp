@@ -57,8 +57,8 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 		//spawn enemy
 
-		AEnemy* pEnemy = GetWorld()->SpawnActor<AEnemy>(Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyClass,
-			spawnpos, FRotator(0.0f,0.0f,0.0f));
+		//AEnemy* pEnemy = GetWorld()->SpawnActor<AEnemy>(Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyClass,
+			//spawnpos, FRotator(0.0f,0.0f,0.0f));
 
 		//decrease Enemy Count of wave
 		Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount--;

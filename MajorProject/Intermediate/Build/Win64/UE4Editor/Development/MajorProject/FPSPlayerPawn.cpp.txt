@@ -1,22 +1,29 @@
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
-d:\adi custovic\majorproject_3.0\majorproject\source\majorproject\player\FPSPlayerPawn.h
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\FPSPlayerPawn.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
-c:\program files\epic games\ue_4.22\engine\source\runtime\engine\classes\kismet\GameplayStaticsTypes.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject\Weapon\Weapon.h
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\Weapon.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+D:\Adi Custovic\Major_Project3.0\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
+d:\adi custovic\major_project3.0\majorproject_3.0\majorproject\source\majorproject\player\FPSPlayerPawn.h
+D:\Adi Custovic\Major_Project3.0\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\FPSPlayerPawn.generated.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+d:\epicgames\ue_4.22\engine\source\runtime\engine\classes\kismet\GameplayStaticsTypes.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+D:\Adi Custovic\Major_Project3.0\MajorProject_3.0\MajorProject\Source\MajorProject\Weapon\Weapon.h
+D:\Adi Custovic\Major_Project3.0\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\Weapon.generated.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\HeadMountedDisplay/Public/MotionControllerComponent.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Public\SceneViewExtension.h
+d:\epicgames\ue_4.22\engine\source\runtime\headmounteddisplay\public\IMotionController.h
+d:\epicgames\ue_4.22\engine\source\runtime\headmounteddisplay\public\LateUpdateManager.h
+d:\epicgames\ue_4.22\engine\source\runtime\headmounteddisplay\public\IIdentifiableXRDevice.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\IIdentifiableXRDevice.generated.h
+D:\EpicGames\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\MotionControllerComponent.generated.h
+D:\EpicGames\UE_4.22\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h

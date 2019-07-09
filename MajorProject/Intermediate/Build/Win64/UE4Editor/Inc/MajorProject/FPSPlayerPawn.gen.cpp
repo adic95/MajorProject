@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon();
+	HEADMOUNTEDDISPLAY_API UClass* Z_Construct_UClass_UMotionControllerComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -217,6 +218,22 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxGrabDistance;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RightController_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RightController;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LeftController_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LeftController;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RightHandMesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RightHandMesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LeftHandMesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LeftHandMesh;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh;
@@ -279,6 +296,42 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance = { "MaxGrabDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, MaxGrabDistance), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController_MetaData[] = {
+		{ "Category", "VR_Player" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\nRight Motion Controller component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController = { "RightController", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, RightController), Z_Construct_UClass_UMotionControllerComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftController_MetaData[] = {
+		{ "Category", "VR_Player" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\nLeft Motion Controller  component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftController = { "LeftController", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, LeftController), Z_Construct_UClass_UMotionControllerComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftController_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftController_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData[] = {
+		{ "Category", "VR_Player" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\nRight skeletal Hand mesh component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh = { "RightHandMesh", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, RightHandMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftHandMesh_MetaData[] = {
+		{ "Category", "VR_Player" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\nLeft skeletal Hand mesh component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftHandMesh = { "LeftHandMesh", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, LeftHandMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftHandMesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftHandMesh_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Mesh_MetaData[] = {
 		{ "Category", "Player" },
 		{ "EditInline", "true" },
@@ -332,6 +385,10 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSPlayerPawn_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_GrabSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftController,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftHandMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Mesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Camera,
@@ -366,7 +423,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerPawn, 1305029286);
+	IMPLEMENT_CLASS(AFPSPlayerPawn, 1928364265);
 	template<> MAJORPROJECT_API UClass* StaticClass<AFPSPlayerPawn>()
 	{
 		return AFPSPlayerPawn::StaticClass();

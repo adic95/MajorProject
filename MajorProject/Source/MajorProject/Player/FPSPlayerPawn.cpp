@@ -8,10 +8,10 @@
 #include "Kismet/GameplayStatics.h" 
 #include "Engine/World.h"
 #include "Weapon\Weapon.h"
+#include "HeadMountedDisplay/Public/MotionControllerComponent.h"
 #pragma region helper include for line tracing
 #include "DrawDebugHelpers.h"
 #pragma endregion
-
 
 // Sets default values
 AFPSPlayerPawn::AFPSPlayerPawn()
@@ -33,6 +33,20 @@ AFPSPlayerPawn::AFPSPlayerPawn()
 
 	Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Camera);
+	
+	
+	// Create Components for the vr Variante
+	LeftController = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("Left Motion Controller"));
+	LeftController->SetupAttachment(pRoot);
+	
+	RightController = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("Right Motion Controller"));
+	RightController->SetupAttachment(pRoot);
+	
+	LeftHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Left Hand Mesh"));
+	LeftHandMesh->SetupAttachment(LeftController);
+	
+	RightHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Right Hand Mesh"));
+	RightHandMesh->SetupAttachment(RightController);
 	//add tags
 	Tags.Add("Player");
 
