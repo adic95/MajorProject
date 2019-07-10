@@ -21,19 +21,19 @@ public:
 	AEnemy();
 
 #pragma region UPROPERTIES
-	UPROPERTY(EditAnywhere, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 	/// <summary>
 	/// movement Speed (cm/s) 
 	/// </summary>
 	float MovementSpeed;
 
-	UPROPERTY(EditAnywhere, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 		/// <summary>
 		/// movement Speed (cm/s) 
 		/// </summary>
 		float MoveDistance;
 	
-	UPROPERTY(EditAnywhere, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 	/// <summary>
 	/// movement speed in cm/s
 	/// </summary>

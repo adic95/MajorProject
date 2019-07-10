@@ -29,11 +29,7 @@ public:
 		/// </summary>
 		UStaticMeshComponent* Mesh;
 
-	UPROPERTY(VisibleAnywhere, Category = "Weapon")
-		/// <summary>
-		/// collision capsule component
-		/// </summary>
-		UCapsuleComponent* Collision;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

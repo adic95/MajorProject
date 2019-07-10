@@ -148,7 +148,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		{ "ToolTip", "<summary>\nmovement speed in cm/s\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance = { "ShootDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, ShootDistance), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance = { "ShootDistance", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, ShootDistance), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -156,7 +156,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		{ "ToolTip", "<summary>\nmovement Speed (cm/s)\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance = { "MoveDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, MoveDistance), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance = { "MoveDistance", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, MoveDistance), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -164,7 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		{ "ToolTip", "<summary>\nmovement Speed (cm/s)\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemy_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_m_firerate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_Collision,
@@ -201,7 +201,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemy, 2226801129);
+	IMPLEMENT_CLASS(AEnemy, 1229296925);
 	template<> MAJORPROJECT_API UClass* StaticClass<AEnemy>()
 	{
 		return AEnemy::StaticClass();
