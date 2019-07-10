@@ -5,6 +5,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h" 
 #include "Engine/World.h"
 #include "Weapon\Weapon.h"
@@ -177,7 +178,9 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 			//bisGrabbing = true;
 			FAttachmentTransformRules rules = FAttachmentTransformRules::SnapToTargetNotIncludingScale;
 			rules.bWeldSimulatedBodies = true;
-			pcurrentWeapon->AttachToComponent(Mesh, rules);
+			pcurrentWeapon->Mesh->SetSimulatePhysics(false);
+			pcurrentWeapon->AttachToComponent(Origin, rules);
+
 
 		}
 		

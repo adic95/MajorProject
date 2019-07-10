@@ -80,7 +80,7 @@ public:
 		USkeletalMeshComponent* LeftHandMesh;
 	
 	
-	UPROPERTY(EditAnywhere, Category = "VR_Player")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "VR_Player")
 		/// <summary>
 		/// Right skeletal Hand mesh component
 		/// </summary>
