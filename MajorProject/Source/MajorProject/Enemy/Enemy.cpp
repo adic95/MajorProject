@@ -33,10 +33,10 @@ AEnemy::AEnemy()
 	USceneComponent* pRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = pRoot;
 
-	// create default capsule component and attach to camera
 	Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Collision"));
 	Collision->SetupAttachment(pRoot);
 
+	
 	// create default skeletal mesh component and attach to camera
 	Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(pRoot);

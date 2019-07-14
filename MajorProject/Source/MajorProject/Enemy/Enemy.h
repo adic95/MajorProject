@@ -45,17 +45,25 @@ public:
 		/// </summary>
 		float ShootSpeed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
+		/// <summary>
+		/// Bool for Animation
+		/// </summary>
+		bool isNear;
+
+	UPROPERTY(VisibleAnywhere, Category = "Enemy")
+		/// <summary>
+		/// skeletal mesh component
+		/// </summary>
+		UCapsuleComponent* Collision;
+
 	UPROPERTY(VisibleAnywhere, Category = "Enemy")
 		/// <summary>
 		/// skeletal mesh component
 		/// </summary>
 		USkeletalMeshComponent* Mesh;
 
-	UPROPERTY(VisibleAnywhere, Category = "Enemy")
-		/// <summary>
-		/// collision capsule component
-		/// </summary>
-		UCapsuleComponent* Collision;
+		
 	
 	UPROPERTY(EditAnywhere, Category = "Enemy")
 	float m_firerate;

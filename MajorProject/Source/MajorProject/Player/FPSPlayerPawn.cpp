@@ -48,6 +48,10 @@ AFPSPlayerPawn::AFPSPlayerPawn()
 	
 	RightHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Right Hand Mesh"));
 	RightHandMesh->SetupAttachment(RightController);
+
+	//MeshSocket = CreateDefaultSubobject<USkeletalMeshSocket>(TEXT("Socket"));
+	
+	
 	//add tags
 	Tags.Add("Player");
 
@@ -72,6 +76,10 @@ void AFPSPlayerPawn::Tick(float DeltaTime)
 	{
 		UpdateGrab(DeltaTime);
 	}
+
+	m_tmpPos =LeftController->GetComponentLocation();
+
+	m_handPositions.Add(m_tmpPos);
 
 }
 
@@ -104,7 +112,7 @@ void AFPSPlayerPawn::ShootCamera()
 
 void AFPSPlayerPawn::ShootWeapon()
 {
-	Shoot(Mesh);
+	Shoot(pcurrentWeapon->Mesh);
 }
 
 //rotate Camera
@@ -166,6 +174,7 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
 	FVector WeaponLocation;
 	FVector Flydir;
+	//FName WeaponSocket = TEXT("WeaponSocket");
 	if (isHit)
 	{
 		GEngine->AddOnScreenDebugMessage(2, 5, FColor::Emerald, FString::Printf(TEXT("Hit!")));

@@ -18,8 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_MajorProject();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AEnemy_ShootFromMesh();
-	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 // End Cross Module References
 	void AEnemy::StaticRegisterNativesAEnemy()
 	{
@@ -68,13 +68,18 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_m_firerate;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Collision_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Collision;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_isNear_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh;
+		static void NewProp_isNear_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_isNear;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShootSpeed_MetaData[];
 #endif
@@ -116,15 +121,6 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_m_firerate = { "m_firerate", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, m_firerate), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_m_firerate_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_m_firerate_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_Collision_MetaData[] = {
-		{ "Category", "Enemy" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Enemy/Enemy.h" },
-		{ "ToolTip", "<summary>\ncollision capsule component\n</summary>" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Collision = { "Collision", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, Collision), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Collision_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Collision_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_Mesh_MetaData[] = {
 		{ "Category", "Enemy" },
 		{ "EditInline", "true" },
@@ -133,6 +129,27 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, Mesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Mesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Mesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_Collision_MetaData[] = {
+		{ "Category", "Enemy" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Enemy/Enemy.h" },
+		{ "ToolTip", "<summary>\nskeletal mesh component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Collision = { "Collision", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, Collision), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Collision_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Collision_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_isNear_MetaData[] = {
+		{ "Category", "Enemy" },
+		{ "ModuleRelativePath", "Enemy/Enemy.h" },
+		{ "ToolTip", "<summary>\nBool for Animation\n</summary>" },
+	};
+#endif
+	void Z_Construct_UClass_AEnemy_Statics::NewProp_isNear_SetBit(void* Obj)
+	{
+		((AEnemy*)Obj)->isNear = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_isNear = { "isNear", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_isNear_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_isNear_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_isNear_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -167,8 +184,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemy, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_MovementSpeed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemy_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_m_firerate,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_Collision,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_Mesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_Collision,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_isNear,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_ShootDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemy_Statics::NewProp_MoveDistance,
@@ -201,7 +219,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemy, 1229296925);
+	IMPLEMENT_CLASS(AEnemy, 2181374183);
 	template<> MAJORPROJECT_API UClass* StaticClass<AEnemy>()
 	{
 		return AEnemy::StaticClass();

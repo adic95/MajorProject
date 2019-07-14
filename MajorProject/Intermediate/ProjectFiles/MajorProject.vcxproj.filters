@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MajorProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DE8D0DF6-CCE9-4879-B562-3AF6D1038079}</UniqueIdentifier>
+      <UniqueIdentifier>{298F8211-C7AA-4F51-9981-31EC555D787E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MajorProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{1E5546CB-CC92-42D3-9D3D-7BDFD299DACC}</UniqueIdentifier>
+      <UniqueIdentifier>{44FA3098-E0F4-4469-8A37-C18747ACC1A4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MajorProject">
-      <UniqueIdentifier>{E6EDDD8B-9195-4A2B-9E9A-76B4677D9AB9}</UniqueIdentifier>
+      <UniqueIdentifier>{85E926BD-EF37-4E6C-AD33-48E98F41B3F3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MajorProject\MajorProject.Build.cs">
       <Filter>Source\MajorProject</Filter>
@@ -39,7 +39,7 @@
       <Filter>Source\MajorProject</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Base">
-      <UniqueIdentifier>{7F32A633-5B37-4D75-85DC-05393E4F1962}</UniqueIdentifier>
+      <UniqueIdentifier>{17F152D8-E48B-4C50-B348-40DF6E46F6DF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Base\MPGameModeBase.cpp">
       <Filter>Source\MajorProject\Base</Filter>
@@ -48,7 +48,7 @@
       <Filter>Source\MajorProject\Base</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Enemy">
-      <UniqueIdentifier>{75B6D35D-1697-4ADA-BDD9-7ED310D21900}</UniqueIdentifier>
+      <UniqueIdentifier>{54015355-2F41-43F0-8296-5E4405DA1A4C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Enemy\Enemy.cpp">
       <Filter>Source\MajorProject\Enemy</Filter>
@@ -57,13 +57,13 @@
       <Filter>Source\MajorProject\Enemy</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Helper">
-      <UniqueIdentifier>{6BEA2EDD-C1FB-483A-A1E9-14F719C8A62F}</UniqueIdentifier>
+      <UniqueIdentifier>{BA90EF91-7C84-4365-8D75-5F5E76CC9D44}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\MajorProject\Helper\Structs.h">
       <Filter>Source\MajorProject\Helper</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Player">
-      <UniqueIdentifier>{F6955DC1-E27B-48D0-8C74-33CD5E588055}</UniqueIdentifier>
+      <UniqueIdentifier>{101ADD1C-84D2-4974-8DB6-798445393202}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Player\FPSPlayerPawn.cpp">
       <Filter>Source\MajorProject\Player</Filter>
@@ -78,7 +78,7 @@
       <Filter>Source\MajorProject\Player</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Spawnpoints">
-      <UniqueIdentifier>{4C5244DC-75F4-4F3E-B08D-D1DC008C5822}</UniqueIdentifier>
+      <UniqueIdentifier>{13BD2CDC-AF24-4351-ADA7-939116701664}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Spawnpoints\EnemySpawnPoint.cpp">
       <Filter>Source\MajorProject\Spawnpoints</Filter>
@@ -93,7 +93,7 @@
       <Filter>Source\MajorProject\Spawnpoints</Filter>
     </ClInclude>
     <Filter Include="Source\MajorProject\Weapon">
-      <UniqueIdentifier>{A980FF78-EFCB-42D0-9D8A-FBC3D98F9622}</UniqueIdentifier>
+      <UniqueIdentifier>{BAD1C851-07AF-424F-B171-DA75DE35B0AB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MajorProject\Weapon\Weapon.cpp">
       <Filter>Source\MajorProject\Weapon</Filter>

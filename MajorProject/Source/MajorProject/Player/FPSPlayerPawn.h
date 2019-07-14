@@ -12,6 +12,7 @@ class UCameraComponent;
 class UCapsuleComponent;
 class AWeapon;
 class UMotionControllerComponent;
+//class USkeletalMeshSocket
 #pragma endregion
 
 
@@ -86,7 +87,6 @@ public:
 		/// </summary>
 		USkeletalMeshComponent* RightHandMesh;
 	
-	
 	UPROPERTY(EditAnywhere, Category = "VR_Player")
 		/// <summary>
 		/// Left Motion Controller  component
@@ -111,7 +111,12 @@ public:
 		/// 
 		/// </summary>
 		float GrabSpeed;
-
+private:
+	AWeapon* pcurrentWeapon;
+	bool bisGrabbing;
+	
+	TArray<FVector> m_handPositions;
+	FVector  m_tmpPos;
 
 
 #pragma endregion
@@ -154,8 +159,6 @@ private:
 	/// <param name="Start">start scene component reference</param>
 	void Shoot(USceneComponent* Start);
 	void UpdateGrab(float DeltaTime);
-	AWeapon* pcurrentWeapon;
-	bool bisGrabbing;
 	
 #pragma endregion
 
