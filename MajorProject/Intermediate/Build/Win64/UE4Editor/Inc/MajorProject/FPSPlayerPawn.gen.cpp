@@ -21,9 +21,12 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Move();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon();
+	MAJORPROJECT_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 	HEADMOUNTEDDISPLAY_API UClass* Z_Construct_UClass_UMotionControllerComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
@@ -35,9 +38,11 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GrabFromDistance", &AFPSPlayerPawn::execGrabFromDistance },
 			{ "Move", &AFPSPlayerPawn::execMove },
+			{ "RecordPositions", &AFPSPlayerPawn::execRecordPositions },
 			{ "RotateCamera", &AFPSPlayerPawn::execRotateCamera },
 			{ "ShootCamera", &AFPSPlayerPawn::execShootCamera },
 			{ "ShootWeapon", &AFPSPlayerPawn::execShootWeapon },
+			{ "ThrowWeapon", &AFPSPlayerPawn::execThrowWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -72,7 +77,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "GrabFromDistance", sizeof(FPSPlayerPawn_eventGrabFromDistance_Parms), Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "GrabFromDistance", sizeof(FPSPlayerPawn_eventGrabFromDistance_Parms), Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -106,13 +111,36 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\nmove player\n</summary>\n<param name=\"Movement\">movement value (x = left / right)</param>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "Move", sizeof(FPSPlayerPawn_eventMove_Parms), Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "Move", sizeof(FPSPlayerPawn_eventMove_Parms), Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Move()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_Move_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "RecordPositions", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -140,7 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\nrotate camera\n</summary>\n<param name=\"Rotate\">rotation value (x = yaw, y = pitch)</param>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "RotateCamera", sizeof(FPSPlayerPawn_eventRotateCamera_Parms), Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "RotateCamera", sizeof(FPSPlayerPawn_eventRotateCamera_Parms), Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -164,7 +192,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\nshoot in camera direction\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "ShootCamera", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "ShootCamera", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -188,13 +216,36 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\nshoot bullet in weapon direction\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "ShootWeapon", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "ShootWeapon", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "ThrowWeapon", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -209,6 +260,14 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_pcurrentWeapon_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_pcurrentWeapon;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThrowForce_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ThrowForce;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GrabSpeed_MetaData[];
 #endif
@@ -266,11 +325,13 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_MajorProject,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFPSPlayerPawn_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance, "GrabFromDistance" }, // 2736532850
-		{ &Z_Construct_UFunction_AFPSPlayerPawn_Move, "Move" }, // 510654517
-		{ &Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera, "RotateCamera" }, // 1569405759
-		{ &Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera, "ShootCamera" }, // 2284864003
-		{ &Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon, "ShootWeapon" }, // 3628987176
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance, "GrabFromDistance" }, // 1015442491
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_Move, "Move" }, // 2716425102
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions, "RecordPositions" }, // 3137330028
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_RotateCamera, "RotateCamera" }, // 279592260
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_ShootCamera, "ShootCamera" }, // 1248422468
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon, "ShootWeapon" }, // 2527182762
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon, "ThrowWeapon" }, // 2067615361
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::Class_MetaDataParams[] = {
@@ -279,6 +340,21 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_pcurrentWeapon_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_pcurrentWeapon = { "pcurrentWeapon", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, pcurrentWeapon), Z_Construct_UClass_AWeapon_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_pcurrentWeapon_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_pcurrentWeapon_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\n\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce = { "ThrowForce", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, ThrowForce), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_GrabSpeed_MetaData[] = {
 		{ "Category", "Player" },
@@ -294,7 +370,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\n\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance = { "MaxGrabDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, MaxGrabDistance), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance = { "MaxGrabDistance", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, MaxGrabDistance), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController_MetaData[] = {
 		{ "Category", "VR_Player" },
@@ -321,7 +397,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\nRight skeletal Hand mesh component\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh = { "RightHandMesh", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, RightHandMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh = { "RightHandMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, RightHandMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftHandMesh_MetaData[] = {
 		{ "Category", "VR_Player" },
@@ -383,6 +459,8 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MovementSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MovementSpeed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSPlayerPawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_pcurrentWeapon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_GrabSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController,
@@ -423,7 +501,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerPawn, 3816677466);
+	IMPLEMENT_CLASS(AFPSPlayerPawn, 2261641976);
 	template<> MAJORPROJECT_API UClass* StaticClass<AFPSPlayerPawn>()
 	{
 		return AFPSPlayerPawn::StaticClass();

@@ -77,10 +77,8 @@ void AFPSPlayerPawn::Tick(float DeltaTime)
 		UpdateGrab(DeltaTime);
 	}
 
-	m_tmpPos =LeftController->GetComponentLocation();
-
-	m_handPositions.Add(m_tmpPos);
-
+	
+	
 }
 
 void AFPSPlayerPawn::Move(FVector2D Movement)
@@ -171,7 +169,8 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 	//Draw ray for debug purposes
 	DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FColor::Red, false, 1, 0, 1);
 	//acutual line trace code and store in bool
-	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
+	//bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
+	bool isHit = GetWorld()->SweepSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), ECC_Visibility,FCollisionShape::MakeSphere(16.f), params);
 	FVector WeaponLocation;
 	FVector Flydir;
 	//FName WeaponSocket = TEXT("WeaponSocket");
@@ -188,16 +187,37 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 			FAttachmentTransformRules rules = FAttachmentTransformRules::SnapToTargetNotIncludingScale;
 			rules.bWeldSimulatedBodies = true;
 			pcurrentWeapon->Mesh->SetSimulatePhysics(false);
-			pcurrentWeapon->AttachToComponent(Origin, rules);
-
-
+			pcurrentWeapon->SetActorEnableCollision(false);
+			pcurrentWeapon->AttachToComponent(Origin, rules, FName("WeaponSocket"));
 		}
-		
-				
-			
-
-
 	}
+}
+
+void AFPSPlayerPawn::ThrowWeapon()
+{
+	if (nullptr == pcurrentWeapon)
+		return;
+	FDetachmentTransformRules detachRules = FDetachmentTransformRules::KeepWorldTransform;
+	pcurrentWeapon->DetachFromActor(detachRules);
+	pcurrentWeapon->Mesh->SetSimulatePhysics(true);
+	pcurrentWeapon->AddActorWorldOffset(m_throwDir *UGameplayStatics::GetWorldDeltaSeconds(GetWorld()) * ThrowForce);
+	pcurrentWeapon->SetActorEnableCollision(true);
+	pcurrentWeapon = nullptr;
+}
+
+void AFPSPlayerPawn::RecordPositions()
+{
+
+	m_tmpPos = LeftController->GetComponentLocation();
+
+	m_handPositions.Add(m_tmpPos);
+
+	if (m_handPositions.Num() >= 40)
+	{
+		m_handPositions.RemoveAt(0);
+	}
+	m_throwDir = m_handPositions[0] - m_handPositions.Num() - 1;
+
 }
 
 void AFPSPlayerPawn::UpdateGrab(float DeltaTime)

@@ -17,6 +17,22 @@ struct FVector2D;
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execRecordPositions) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RecordPositions(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execThrowWeapon) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ThrowWeapon(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGrabFromDistance) \
 	{ \
 		P_GET_OBJECT(USceneComponent,Z_Param_Origin); \
@@ -62,6 +78,22 @@ struct FVector2D;
 
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRecordPositions) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RecordPositions(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execThrowWeapon) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ThrowWeapon(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGrabFromDistance) \
 	{ \
@@ -149,7 +181,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPSPlayerPawn); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPSPlayerPawn)
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_PRIVATE_PROPERTY_OFFSET
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__pcurrentWeapon() { return STRUCT_OFFSET(AFPSPlayerPawn, pcurrentWeapon); }
+
+
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_19_PROLOG
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

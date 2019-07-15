@@ -81,7 +81,7 @@ public:
 		USkeletalMeshComponent* LeftHandMesh;
 	
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "VR_Player")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "VR_Player")
 		/// <summary>
 		/// Right skeletal Hand mesh component
 		/// </summary>
@@ -100,7 +100,7 @@ public:
 		UMotionControllerComponent* RightController;
 
 
-	UPROPERTY(EditAnywhere, Category = "Player")
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category = "Player")
 		/// <summary>
 		/// 
 		/// </summary>
@@ -111,14 +111,22 @@ public:
 		/// 
 		/// </summary>
 		float GrabSpeed;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		/// <summary>
+		/// 
+		/// </summary>
+		float ThrowForce;
 private:
-	AWeapon* pcurrentWeapon;
 	bool bisGrabbing;
 	
 	TArray<FVector> m_handPositions;
 	FVector  m_tmpPos;
+	FVector m_throwDir;
 
-
+	protected:
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Player")
+	AWeapon* pcurrentWeapon;
 #pragma endregion
 
 #pragma region UFUNCTION
@@ -150,6 +158,12 @@ private:
 		
 	UFUNCTION(BlueprintCallable, Category = "Player")
 		void GrabFromDistance(USceneComponent* Origin);
+
+	UFUNCTION(BlueprintCallable, Category = "Player")
+		void ThrowWeapon();
+	
+	UFUNCTION(BlueprintCallable, Category = "Player")
+		void RecordPositions();
 #pragma endregion
 private:
 #pragma region private function
