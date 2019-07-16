@@ -42,3 +42,9 @@ void AWeapon::Tick(float DeltaTime)
 		m_lastfired -= DeltaTime;
 }
 
+void AWeapon::Collide(UActorComponent* OtherComp)
+{
+	if (OtherComp->ComponentHasTag("Destroy"))
+		OtherComp->GetOwner()->Destroy();
+}
+

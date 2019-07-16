@@ -144,11 +144,9 @@ void AFPSPlayerPawn::Shoot(USceneComponent* Start)
 void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 {
 	if (pcurrentWeapon->AmmoAmount <= 0)
-	{
-		GEngine->AddOnScreenDebugMessage(100, 3, FColor::Emerald, FString::Printf(TEXT("out of Ammo!")));
 		return;
-	}
-	//creat hit result variable
+	
+	//create hit result variable
 	FHitResult hit;
 	//creating collision params and ignoring the player
 	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), false, this);
@@ -187,7 +185,7 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 	DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FColor::Red, false, 1, 0, 1);
 	//acutual line trace code and store in bool
 	//bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
-	bool isHit = GetWorld()->SweepSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), ECC_Visibility,FCollisionShape::MakeSphere(16.f), params);
+	bool isHit = GetWorld()->SweepSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), ECC_Visibility,FCollisionShape::MakeSphere(32.f), params);
 	FVector WeaponLocation;
 	FVector Flydir;
 	//FName WeaponSocket = TEXT("WeaponSocket");
@@ -221,8 +219,8 @@ void AFPSPlayerPawn::ThrowWeapon()
 	FDetachmentTransformRules detachRules = FDetachmentTransformRules::KeepWorldTransform;
 	pcurrentWeapon->DetachFromActor(detachRules);
 	bGrabbed = false;
-	pcurrentWeapon->Mesh->SetSimulatePhysics(true);
 	pcurrentWeapon->AddActorWorldOffset(m_throwDir *UGameplayStatics::GetWorldDeltaSeconds(GetWorld()) * ThrowForce);
+	pcurrentWeapon->Mesh->SetSimulatePhysics(true);
 	pcurrentWeapon->SetActorEnableCollision(true);
 	pcurrentWeapon = nullptr;
 }

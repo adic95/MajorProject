@@ -70,6 +70,7 @@ void AMPGameModeBase::Tick(float DeltaTime)
 		if (pWeapon != nullptr)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Blue,TEXT(" Weapon Spawned"));
+			pWeapon->Mesh->SetSimulatePhysics(false);
 		}
 
 		else

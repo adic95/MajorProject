@@ -17,10 +17,59 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	MAJORPROJECT_API UClass* Z_Construct_UClass_AWeapon();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_MajorProject();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AWeapon_Collide();
+	ENGINE_API UClass* Z_Construct_UClass_UActorComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AWeapon::StaticRegisterNativesAWeapon()
 	{
+		UClass* Class = AWeapon::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Collide", &AWeapon::execCollide },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AWeapon_Collide_Statics
+	{
+		struct Weapon_eventCollide_Parms
+		{
+			UActorComponent* OtherComp;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeapon_Collide_Statics::NewProp_OtherComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWeapon_Collide_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Weapon_eventCollide_Parms, OtherComp), Z_Construct_UClass_UActorComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AWeapon_Collide_Statics::NewProp_OtherComp_MetaData, ARRAY_COUNT(Z_Construct_UFunction_AWeapon_Collide_Statics::NewProp_OtherComp_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWeapon_Collide_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWeapon_Collide_Statics::NewProp_OtherComp,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AWeapon_Collide_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "ModuleRelativePath", "Weapon/Weapon.h" },
+		{ "ToolTip", "<summary>\ncollide with other component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AWeapon_Collide_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeapon, nullptr, "Collide", sizeof(Weapon_eventCollide_Parms), Z_Construct_UFunction_AWeapon_Collide_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AWeapon_Collide_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AWeapon_Collide_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AWeapon_Collide_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AWeapon_Collide()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AWeapon_Collide_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AWeapon_NoRegister()
 	{
@@ -29,6 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	struct Z_Construct_UClass_AWeapon_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -51,6 +101,9 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	UObject* (*const Z_Construct_UClass_AWeapon_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_MajorProject,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AWeapon_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AWeapon_Collide, "Collide" }, // 2182662044
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::Class_MetaDataParams[] = {
@@ -94,11 +147,11 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AWeapon_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::PropPointers),
 		0,
 		0x009000A0u,
@@ -113,7 +166,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeapon, 852175171);
+	IMPLEMENT_CLASS(AWeapon, 3071513806);
 	template<> MAJORPROJECT_API UClass* StaticClass<AWeapon>()
 	{
 		return AWeapon::StaticClass();

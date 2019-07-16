@@ -42,6 +42,13 @@ public:
 	float m_lastfired;
 
 	
+
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		/// <summary>
+		/// collide with other component
+		/// </summary>
+		void Collide(UActorComponent* OtherComp);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
