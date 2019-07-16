@@ -23,11 +23,23 @@ public:
 	// Sets default values for this actor's properties
 	AWeapon();
 
-	UPROPERTY(VisibleAnywhere, Category = "Weapon")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Weapon")
 		/// <summary>
 		/// static mesh component
 		/// </summary>
 		UStaticMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		float firerate;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		int AmmoAmount;
+
+
+
+
+
+	float m_lastfired;
 
 	
 protected:

@@ -117,6 +117,11 @@ public:
 		/// 
 		/// </summary>
 		float ThrowForce;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player")
+		bool bGrabbed;
+
+	
 private:
 	bool bisGrabbing;
 	
@@ -172,6 +177,7 @@ private:
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
 	void Shoot(USceneComponent* Start);
+	void Shoot(FVector Startpos, FVector Direction);
 	void UpdateGrab(float DeltaTime);
 	
 #pragma endregion

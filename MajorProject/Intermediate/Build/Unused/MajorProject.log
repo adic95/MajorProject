@@ -2,16 +2,16 @@
   Creating makefile for MajorProjectEditor (ini files are newer than makefile)
   Parsing headers for MajorProjectEditor
     Running UnrealHeaderTool "D:\Adi Custovic\MajorProject_3.0\MajorProject\MajorProject.uproject" "D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for MajorProjectEditor in 5.8242138 seconds
+  Reflection code generated for MajorProjectEditor in 4.9101747 seconds
   Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 8 processes...
     [1/4] FPSPlayerPawn.cpp
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject\Player\FPSPlayerPawn.cpp(244): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject\Player\FPSPlayerPawn.cpp(261): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
     C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/SceneComponent.h(659): note: see declaration of 'USceneComponent::AttachTo'
-    [2/4] UE4Editor-MajorProject-0003.lib
-       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0003.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0003.exp
-    [3/4] UE4Editor-MajorProject-0003.dll
-       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0003.suppressed.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0003.suppressed.exp
+    [2/4] UE4Editor-MajorProject-0015.lib
+       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0015.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0015.exp
+    [3/4] UE4Editor-MajorProject-0015.dll
+       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0015.suppressed.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0015.suppressed.exp
     [4/4] MajorProjectEditor.target
-  Total time in Parallel executor: 2.88 seconds
-  Total execution time: 10.71 seconds
+  Total time in Parallel executor: 1.98 seconds
+  Total execution time: 8.50 seconds

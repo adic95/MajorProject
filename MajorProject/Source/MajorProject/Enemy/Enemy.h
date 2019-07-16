@@ -66,7 +66,9 @@ public:
 		
 	
 	UPROPERTY(EditAnywhere, Category = "Enemy")
-	float m_firerate;
+		float firerate;
+
+
 
 
 
@@ -90,7 +92,7 @@ private:
 	/// <summary>
 	/// Shoot/ Strike timer in seconds
 	/// </summary>
-	float m_shootTimer = 0.0f;
+	//float m_shootTimer = 0.0f;
 
 	/// <summary>
 	/// Move direction

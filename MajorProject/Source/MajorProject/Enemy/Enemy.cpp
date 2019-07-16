@@ -94,7 +94,7 @@ void AEnemy::Tick(float DeltaTime)
 
 		
 		//reset shoot timer
-		m_shootTimer = 0.0f;
+		//m_shootTimer = 0.0f;
 
 
 		//Calc direction to player
@@ -138,7 +138,7 @@ void AEnemy::Shoot(USceneComponent* Start)
 	FHitResult hit;
 	FCollisionQueryParams params;
 	DrawDebugLine(GetWorld(), Start->GetComponentLocation(), Start->GetComponentLocation() + (1000.f * Start->GetForwardVector()), FColor::Green, false, 1, 0, 1);
-	m_lastfired = m_firerate;
+	m_lastfired = firerate;
 	LOG("Shoot RAY", 5.f);
 
 
