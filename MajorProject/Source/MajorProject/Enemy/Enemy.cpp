@@ -10,6 +10,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Base\MPGameModeBase.h"
 #pragma endregion
 /// <summary>
 /// Define custom macro for debugging 
@@ -43,6 +44,10 @@ AEnemy::AEnemy()
 
 	// add tag
 	Tags.Add("Enemy");
+
+	Idle = false;
+	StartRun = false;
+	Attack = false;
 }
 
 
@@ -72,8 +77,8 @@ void AEnemy::Tick(float DeltaTime)
 	if (!pPlayer)
 		return;
 
-	//if player is in Shoot Distance
-	if ((pPlayer->GetActorLocation() - GetActorLocation()).Size() < ShootDistance)
+	//if player is in Strike Distance
+	if ((pPlayer->GetActorLocation() - GetActorLocation()).Size() < StrikeDistance)
 	{
 		//rotate towards Player
 		SetActorRotation(UKismetMathLibrary::MakeRotFromX(pPlayer->GetActorLocation() - GetActorLocation()));
@@ -88,10 +93,6 @@ void AEnemy::Tick(float DeltaTime)
 		/*if (m_shootTimer < 1 / ShootSpeed)
 			return;*/
 		
-		if (m_lastfired > 0)
-			m_lastfired -= DeltaTime;
-		
-
 		
 		//reset shoot timer
 		//m_shootTimer = 0.0f;
@@ -100,6 +101,9 @@ void AEnemy::Tick(float DeltaTime)
 		//Calc direction to player
 		FVector playerdir = (pPlayer->GetActorLocation() - GetActorLocation());
 		playerdir.Normalize();
+		StartRun = false;
+		Idle = false;
+		Attack = true;
 
 	}
 	//IF player in Move distance
@@ -112,25 +116,50 @@ void AEnemy::Tick(float DeltaTime)
 		m_dir = pPlayer->GetActorLocation() - GetActorLocation();
 		m_dir.Normalize();
 		m_dir.Z = 0.0f;
+		Idle = false;
+		Attack = false;
+		StartRun = true;
 
+
+
+
+		
 	}
 	// if player is not in distance
 	else
 	{
 		//reset
 		m_dir = FVector::ZeroVector;
+		StartRun = false;
+		Attack = false;
+		Idle = true;
 	}
 
 	//Move enemy
 	AddActorWorldOffset(m_dir * DeltaTime * MovementSpeed);
+
+	
+
 }
 
-void AEnemy::ShootFromMesh()
+/*void AEnemy::PlayAnimation()
 {
-	Shoot(Collision);
-}
+	
+	if ((pPlayer->GetActorLocation() - GetActorLocation()).Size() >= StrikeDistance)
+	{
+		Attack = true;
+	}
+	
+}*/
 
-void AEnemy::Shoot(USceneComponent* Start)
+
+
+/*void AEnemy::ShootFromMesh()
+{
+	//Shoot(Collision);
+}*/
+
+/*void AEnemy::Shoot(USceneComponent* Start)
 {
 	if (m_lastfired > 0 || (pPlayer->GetActorLocation() - GetActorLocation()).Size() >= ShootDistance)
 		return;
@@ -142,5 +171,5 @@ void AEnemy::Shoot(USceneComponent* Start)
 	LOG("Shoot RAY", 5.f);
 
 
-}
+}*/
 

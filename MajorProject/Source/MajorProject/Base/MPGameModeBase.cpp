@@ -20,6 +20,20 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 	Super::Tick(DeltaTime);
 
+
+	for (TActorIterator<AEnemy> EnemyItr(GetWorld()); EnemyItr; ++EnemyItr)
+	{
+		for (TActorIterator<AEnemy> InnerItr = EnemyItr; InnerItr; ++InnerItr)
+		{
+			m_EnemyPos = EnemyItr->GetActorLocation();
+			FVector dir = EnemyItr->GetActorLocation() - InnerItr->GetActorLocation();
+			if (dir.SizeSquared() <= 100.f * 100.0f)
+			{
+				EnemyItr->AddActorWorldOffset(dir.GetSafeNormal() * DeltaTime * EnemyItr->MovementSpeed);
+			}
+
+		}
+	}
 	//Gamemode logic
 
 	// if current higher than total rounds return
@@ -57,8 +71,8 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 		//spawn enemy
 
-		//AEnemy* pEnemy = GetWorld()->SpawnActor<AEnemy>(Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyClass,
-			//spawnpos, FRotator(0.0f,0.0f,0.0f));
+		AEnemy* pEnemy = GetWorld()->SpawnActor<AEnemy>(Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyClass,
+			spawnpos, FRotator(0.0f,0.0f,0.0f));
 
 		//decrease Enemy Count of wave
 		Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount--;

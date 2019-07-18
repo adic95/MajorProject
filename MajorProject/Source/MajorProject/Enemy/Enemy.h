@@ -37,7 +37,7 @@ public:
 	/// <summary>
 	/// movement speed in cm/s
 	/// </summary>
-	float ShootDistance;
+	float StrikeDistance;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 		/// <summary>
@@ -45,11 +45,25 @@ public:
 		/// </summary>
 		float ShootSpeed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
 		/// <summary>
 		/// Bool for Animation
 		/// </summary>
-		bool isNear;
+		bool Idle;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
+		/// <summary>
+		/// Bool for Animation
+		/// </summary>
+		bool StartRun;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
+		/// <summary>
+		/// Bool for Animation
+		/// </summary>
+		bool Attack;
+
+
 
 	UPROPERTY(VisibleAnywhere, Category = "Enemy")
 		/// <summary>
@@ -72,7 +86,6 @@ public:
 
 
 
-	float m_lastfired;
 
 	
 
@@ -85,8 +98,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 #pragma region UFUNCTIONS
-	UFUNCTION(BlueprintCallable, Category = "Enemy")
-		void ShootFromMesh();
+	//UFUNCTION(BlueprintCallable, Category = "Enemy")
+		//void ShootFromMesh();
+	//UFUNCTION(BlueprintCallable, Category = "Enemy")
+		//void PlayAnimation();
+	
 private:
 #pragma region private variables
 	/// <summary>
@@ -99,6 +115,7 @@ private:
 	/// </summary>
 	
 	FVector m_dir;
+	float m_lastfired;
 #pragma endregion
 
 #pragma region private pointer
@@ -110,7 +127,9 @@ private:
 	/// Shoot ray
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
-	void Shoot(USceneComponent* Start);
+	//void Shoot(USceneComponent* Start);
+
+	
 
 
 

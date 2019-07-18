@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UActorComponent;
 class USceneComponent;
 struct FVector2D;
 #ifdef MAJORPROJECT_FPSPlayerPawn_generated_h
@@ -16,6 +17,15 @@ struct FVector2D;
 #define MAJORPROJECT_FPSPlayerPawn_generated_h
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execCollide) \
+	{ \
+		P_GET_OBJECT(UActorComponent,Z_Param_OtherComp); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Collide(Z_Param_OtherComp); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execRecordPositions) \
 	{ \
@@ -78,6 +88,15 @@ struct FVector2D;
 
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCollide) \
+	{ \
+		P_GET_OBJECT(UActorComponent,Z_Param_OtherComp); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Collide(Z_Param_OtherComp); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execRecordPositions) \
 	{ \

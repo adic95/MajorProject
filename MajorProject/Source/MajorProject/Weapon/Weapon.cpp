@@ -24,6 +24,8 @@ AWeapon::AWeapon()
 	// add tag
 	Tags.Add("Weapon");
 
+
+	
 }
 
 // Called when the game starts or when spawned

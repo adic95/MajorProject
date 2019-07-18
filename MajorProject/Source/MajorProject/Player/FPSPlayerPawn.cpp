@@ -240,6 +240,13 @@ void AFPSPlayerPawn::RecordPositions()
 
 }
 
+void AFPSPlayerPawn::Collide(UActorComponent * OtherComp)
+{
+	if (OtherComp->ComponentHasTag("Damage"))
+		GEngine->AddOnScreenDebugMessage(16, 5, FColor::Emerald, FString::Printf(TEXT("DAMAGE!")));
+	
+}
+
 void AFPSPlayerPawn::UpdateGrab(float DeltaTime)
 {
 	if (!pcurrentWeapon || !bisGrabbing)

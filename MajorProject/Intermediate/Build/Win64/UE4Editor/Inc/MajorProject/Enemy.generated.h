@@ -13,28 +13,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MAJORPROJECT_Enemy_generated_h
 
-#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execShootFromMesh) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ShootFromMesh(); \
-		P_NATIVE_END; \
-	}
-
-
-#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execShootFromMesh) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ShootFromMesh(); \
-		P_NATIVE_END; \
-	}
-
-
+#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS
+#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS_NO_PURE_DECLS
 #define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEnemy(); \

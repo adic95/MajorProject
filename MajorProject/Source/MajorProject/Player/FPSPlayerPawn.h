@@ -169,6 +169,12 @@ private:
 	
 	UFUNCTION(BlueprintCallable, Category = "Player")
 		void RecordPositions();
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		/// <summary>
+		/// collide with other component
+		/// </summary>
+		void Collide(UActorComponent* OtherComp);
 #pragma endregion
 private:
 #pragma region private function

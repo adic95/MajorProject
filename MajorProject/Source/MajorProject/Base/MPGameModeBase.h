@@ -85,6 +85,8 @@ private:
 
 	// Spawnpoint position of Weapon Stash
 	FVector m_weaponSpawnpos;
+	FVector m_EnemyPos;
+
 
 #pragma endregion
 };

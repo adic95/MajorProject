@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	MAJORPROJECT_API UClass* Z_Construct_UClass_AFPSPlayerPawn();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_MajorProject();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Collide();
+	ENGINE_API UClass* Z_Construct_UClass_UActorComponent_NoRegister();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Move();
@@ -36,6 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	{
 		UClass* Class = AFPSPlayerPawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Collide", &AFPSPlayerPawn::execCollide },
 			{ "GrabFromDistance", &AFPSPlayerPawn::execGrabFromDistance },
 			{ "Move", &AFPSPlayerPawn::execMove },
 			{ "RecordPositions", &AFPSPlayerPawn::execRecordPositions },
@@ -45,6 +48,48 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 			{ "ThrowWeapon", &AFPSPlayerPawn::execThrowWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics
+	{
+		struct FPSPlayerPawn_eventCollide_Parms
+		{
+			UActorComponent* OtherComp;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::NewProp_OtherComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FPSPlayerPawn_eventCollide_Parms, OtherComp), Z_Construct_UClass_UActorComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::NewProp_OtherComp_MetaData, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::NewProp_OtherComp_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::NewProp_OtherComp,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\ncollide with other component\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "Collide", sizeof(FPSPlayerPawn_eventCollide_Parms), Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Collide()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance_Statics
 	{
@@ -330,6 +375,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_MajorProject,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFPSPlayerPawn_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_Collide, "Collide" }, // 1168161109
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance, "GrabFromDistance" }, // 1015442491
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_Move, "Move" }, // 2716425102
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_RecordPositions, "RecordPositions" }, // 3137330028
@@ -518,7 +564,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerPawn, 3149324352);
+	IMPLEMENT_CLASS(AFPSPlayerPawn, 3334124413);
 	template<> MAJORPROJECT_API UClass* StaticClass<AFPSPlayerPawn>()
 	{
 		return AFPSPlayerPawn::StaticClass();

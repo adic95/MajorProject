@@ -161,7 +161,7 @@ void EmptyLinkFunctionForGeneratedCodeVRPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AVRPlayerPawn, 722771064);
+	IMPLEMENT_CLASS(AVRPlayerPawn, 1142276385);
 	template<> MAJORPROJECT_API UClass* StaticClass<AVRPlayerPawn>()
 	{
 		return AVRPlayerPawn::StaticClass();
