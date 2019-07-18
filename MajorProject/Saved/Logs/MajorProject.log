@@ -5645,3 +5645,238 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.07.18-16.43.53:371][190]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
 [2019.07.18-16.43.53:846][228]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
 [2019.07.18-16.43.59:234][659]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.44.08:521][401]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.44.54:270][ 59]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.44.59:271][459]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-16.44.59:333][459]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-16.44.59:380][459]LogSlate: Window 'MajorProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.07.18-16.44.59:411][459]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.07.18-16.44.59:412][459]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-16.44.59:458][459]LogUObjectHash: Compacting FUObjectHashTables data took   3.64ms
+[2019.07.18-16.44.59:474][460]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2019.07.18-16.44.59:474][460]LogEngine: Changing dynamic resolution state.
+[2019.07.18-16.46.36:327][884]LogBlueprintActionDatabase: Requesting refresh due to module change: ExternalImagePicker (loaded)
+[2019.07.18-16.46.37:521][884]LogSlate: Only BGRA pngs, bmps or icos are supported in by External Image Picker
+[2019.07.18-16.47.37:285][199]LogHotReload: New module detected: UE4Editor-MajorProject-0013.dll
+[2019.07.18-16.47.38:644][204]LogHotReload: Starting Hot-Reload from IDE
+[2019.07.18-16.47.38:736][204]LogUObjectHash: Compacting FUObjectHashTables data took   4.25ms
+[2019.07.18-16.47.38:738][204]LogBlueprintActionDatabase: Requesting refresh due to module change: MajorProject (unloaded)
+[2019.07.18-16.47.38:769][204]LogClass: EnemyRound HotReload.
+[2019.07.18-16.47.38:769][204]LogClass: EnemyWave HotReload.
+[2019.07.18-16.47.38:780][204]LogBlueprintActionDatabase: Requesting refresh due to module change: MajorProject (loaded)
+[2019.07.18-16.47.38:781][204]LogContentBrowser: Native class hierarchy updated for 'MajorProject' in 0.0004 seconds. Added 7 classes and 7 folders.
+[2019.07.18-16.47.38:786][204]Display: HotReload successful (11 functions remapped  2 scriptstructs remapped)
+[2019.07.18-16.47.38:915][204]LogUObjectHash: Compacting FUObjectHashTables data took   2.72ms
+[2019.07.18-16.47.38:916][204]LogBlueprintActionDatabase: Requesting refresh due to hot reload
+[2019.07.18-16.47.38:996][204]LogContentBrowser: Native class hierarchy populated in 0.0079 seconds. Added 2745 classes and 674 folders.
+[2019.07.18-16.47.38:999][204]Display: HotReload took  0.4s.
+[2019.07.18-16.50.08:456][633]LogTemp: Repeating last play command: VR Preview
+[2019.07.18-16.50.08:468][633]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-16.50.08:468][633]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.07.18-16.50.08:468][633]LogHMD: Initializing OVRPlugin session
+[2019.07.18-16.50.08:547][633]LogHMD: Allocating Oculus 3296 x 1776 rendertarget swapchain
+[2019.07.18-16.50.08:547][633]PIE: New page: PIE session: Start (Jul 18, 2019, 8:50:08 PM)
+[2019.07.18-16.50.08:547][633]LogPlayLevel: Creating play world package: /Game/Level/UEDPIE_0_Start
+[2019.07.18-16.50.08:557][633]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009420s)
+[2019.07.18-16.50.08:558][633]LogAIModule: Creating AISystem for world Start
+[2019.07.18-16.50.08:558][633]LogPlayLevel: PIE: World Init took: (0.001401s)
+[2019.07.18-16.50.08:559][633]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Level/Start.Start to /Game/Level/UEDPIE_0_Start.Start (0.011090s)
+[2019.07.18-16.50.08:644][633]LogUObjectHash: Compacting FUObjectHashTables data took   3.24ms
+[2019.07.18-16.50.08:672][633]LogInit: XAudio2 using 'Headphones (2- Rift S)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.07.18-16.50.08:681][633]LogInit: FAudioDevice initialized.
+[2019.07.18-16.50.08:687][633]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-16.50.08:741][633]LogLoad: Game class is 'BP_MPGameModeBase_C'
+[2019.07.18-16.50.08:745][633]LogWorld: Bringing World /Game/Level/UEDPIE_0_Start.Start up for play (max tick rate 0) at 2019.07.18-18.50.08
+[2019.07.18-16.50.08:746][633]LogWorld: Bringing up level for play took: 0.003666
+[2019.07.18-16.50.08:763][633]PIE: Play in editor start time for /Game/Level/UEDPIE_0_Start 0.548
+[2019.07.18-16.50.08:763][633]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-16.50.08:764][633]LogEngine: Changing dynamic resolution state.
+[2019.07.18-16.50.08:767][633]LogHMD: Allocating Oculus 3296 x 1776 depth rendertarget swapchain
+[2019.07.18-16.50.16:779][274]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.16:794][276]LogProfilingDebugging: Allocated a 1024 x 1024 texture for HMD canvas layer
+[2019.07.18-16.50.19:017][453]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.19:994][531]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.20:179][546]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.22:267][713]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.22:992][771]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.23:480][810]ENEMY: Error: Found Player
+[2019.07.18-16.50.25:254][952]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.26:492][ 51]ENEMY: Error: Found Player
+[2019.07.18-16.50.28:028][174]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.28:579][218]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.29:492][291]ENEMY: Error: Found Player
+[2019.07.18-16.50.29:728][310]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-16.50.32:503][532]ENEMY: Error: Found Player
+[2019.07.18-16.50.35:504][772]ENEMY: Error: Found Player
+[2019.07.18-16.50.38:514][ 13]ENEMY: Error: Found Player
+[2019.07.18-16.50.41:527][251]ENEMY: Error: Found Player
+[2019.07.18-16.50.50:103][937]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-16.50.50:162][937]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-16.50.50:193][937]LogSlate: Window 'MajorProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.07.18-16.50.50:226][937]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.07.18-16.50.50:226][937]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-16.50.50:272][937]LogUObjectHash: Compacting FUObjectHashTables data took   4.73ms
+[2019.07.18-16.50.50:291][938]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2019.07.18-16.50.50:292][938]LogEngine: Changing dynamic resolution state.
+[2019.07.18-16.50.56:221][645]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Enemy/BP_Enemy.BP_Enemy
+[2019.07.18-16.51.20:761][309]BlueprintLog: New page: Compile BP_Enemy
+[2019.07.18-16.51.20:943][309]LogUObjectHash: Compacting FUObjectHashTables data took   2.88ms
+[2019.07.18-16.56.49:759][543]LogUObjectHash: Compacting FUObjectHashTables data took   3.07ms
+[2019.07.18-16.56.49:759][543]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Level/Start' took 0.032
+[2019.07.18-16.56.49:760][543]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Enemy/BP_Enemy] ([1] browsable assets)...
+[2019.07.18-16.56.49:775][543]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Enemy/BP_Enemy.BP_Enemy]
+[2019.07.18-16.56.49:775][543]OBJ SavePackage: Finished generating thumbnails for package [/Game/Enemy/BP_Enemy]
+[2019.07.18-16.56.49:775][543]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Enemy/BP_Enemy" FILE="D:/Adi Custovic/MajorProject_3.0/MajorProject/Saved/Autosaves/Game/Enemy/BP_Enemy_Auto7.uasset" SILENT=false AUTOSAVING=true
+[2019.07.18-16.56.49:801][543]LogSavePackage: Moving 'D:/Adi Custovic/MajorProject_3.0/MajorProject/Saved/BP_Enemy_Auto75935DCB443AFA459F461F6AF1F045E2E.tmp' to 'D:/Adi Custovic/MajorProject_3.0/MajorProject/Saved/Autosaves/Game/Enemy/BP_Enemy_Auto7.uasset'
+[2019.07.18-16.56.49:801][543]LogFileHelpers: Auto-saving content packages took 0.042
+[2019.07.18-17.16.14:934][609]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Enemy/BP_Enemy" FILE="D:/Adi Custovic/MajorProject_3.0/MajorProject/Content/Enemy/BP_Enemy.uasset" SILENT=true
+[2019.07.18-17.16.14:974][609]LogSavePackage: Moving 'D:/Adi Custovic/MajorProject_3.0/MajorProject/Saved/BP_EnemyB6933D6F48B3CB2217E6048EB912ECC7.tmp' to 'D:/Adi Custovic/MajorProject_3.0/MajorProject/Content/Enemy/BP_Enemy.uasset'
+[2019.07.18-17.16.20:576][270]LogTemp: Repeating last play command: VR Preview
+[2019.07.18-17.16.20:590][270]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.16.20:590][270]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.07.18-17.16.20:590][270]LogHMD: Initializing OVRPlugin session
+[2019.07.18-17.16.20:659][270]LogHMD: Allocating Oculus 3296 x 1776 rendertarget swapchain
+[2019.07.18-17.16.20:660][270]PIE: New page: PIE session: Start (Jul 18, 2019, 9:16:20 PM)
+[2019.07.18-17.16.20:660][270]LogPlayLevel: Creating play world package: /Game/Level/UEDPIE_0_Start
+[2019.07.18-17.16.20:667][270]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006723s)
+[2019.07.18-17.16.20:667][270]LogAIModule: Creating AISystem for world Start
+[2019.07.18-17.16.20:667][270]LogPlayLevel: PIE: World Init took: (0.000662s)
+[2019.07.18-17.16.20:667][270]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Level/Start.Start to /Game/Level/UEDPIE_0_Start.Start (0.007550s)
+[2019.07.18-17.16.20:697][270]LogUObjectHash: Compacting FUObjectHashTables data took   3.03ms
+[2019.07.18-17.16.20:718][270]LogInit: XAudio2 using 'Headphones (2- Rift S)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.07.18-17.16.20:731][270]LogInit: FAudioDevice initialized.
+[2019.07.18-17.16.20:738][270]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-17.16.20:796][270]LogLoad: Game class is 'BP_MPGameModeBase_C'
+[2019.07.18-17.16.20:800][270]LogWorld: Bringing World /Game/Level/UEDPIE_0_Start.Start up for play (max tick rate 0) at 2019.07.18-19.16.20
+[2019.07.18-17.16.20:801][270]LogWorld: Bringing up level for play took: 0.003523
+[2019.07.18-17.16.20:820][270]PIE: Play in editor start time for /Game/Level/UEDPIE_0_Start 0.559
+[2019.07.18-17.16.20:820][270]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.16.20:821][270]LogEngine: Changing dynamic resolution state.
+[2019.07.18-17.16.20:826][270]LogHMD: Allocating Oculus 3296 x 1776 depth rendertarget swapchain
+[2019.07.18-17.16.35:592][767]ENEMY: Error: Found Player
+[2019.07.18-17.16.35:605][769]LogProfilingDebugging: Allocated a 1024 x 1024 texture for HMD canvas layer
+[2019.07.18-17.16.35:665][773]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.37:191][895]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.38:604][  8]ENEMY: Error: Found Player
+[2019.07.18-17.16.39:815][105]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.40:990][199]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.41:604][248]ENEMY: Error: Found Player
+[2019.07.18-17.16.42:315][305]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.44:616][489]ENEMY: Error: Found Player
+[2019.07.18-17.16.47:628][730]ENEMY: Error: Found Player
+[2019.07.18-17.16.50:628][970]ENEMY: Error: Found Player
+[2019.07.18-17.16.53:640][211]ENEMY: Error: Found Player
+[2019.07.18-17.16.57:552][524]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.57:965][557]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.16.58:290][583]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.03:464][997]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.04:501][ 80]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.16:040][  2]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.21:226][417]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.22:889][550]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.28:077][965]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.17.28:139][965]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-17.17.28:180][965]LogSlate: Window 'MajorProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.07.18-17.17.28:218][965]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.07.18-17.17.28:218][965]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.17.28:268][965]LogUObjectHash: Compacting FUObjectHashTables data took   3.13ms
+[2019.07.18-17.17.28:292][966]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2019.07.18-17.17.28:292][966]LogEngine: Changing dynamic resolution state.
+[2019.07.18-17.17.42:804][626]BlueprintLog: New page: Compile BP_Enemy
+[2019.07.18-17.17.42:988][626]LogUObjectHash: Compacting FUObjectHashTables data took   2.63ms
+[2019.07.18-17.17.43:502][673]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Enemy/BP_Enemy" FILE="D:/Adi Custovic/MajorProject_3.0/MajorProject/Content/Enemy/BP_Enemy.uasset" SILENT=true
+[2019.07.18-17.17.43:526][673]LogSavePackage: Moving 'D:/Adi Custovic/MajorProject_3.0/MajorProject/Saved/BP_Enemy48D5895B4D83953F21E8D4A6A94BAA47.tmp' to 'D:/Adi Custovic/MajorProject_3.0/MajorProject/Content/Enemy/BP_Enemy.uasset'
+[2019.07.18-17.17.45:318][840]LogTemp: Repeating last play command: VR Preview
+[2019.07.18-17.17.45:334][840]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.17.45:334][840]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.07.18-17.17.45:334][840]LogHMD: Initializing OVRPlugin session
+[2019.07.18-17.17.45:409][840]LogHMD: Allocating Oculus 3296 x 1776 rendertarget swapchain
+[2019.07.18-17.17.45:410][840]PIE: New page: PIE session: Start (Jul 18, 2019, 9:17:45 PM)
+[2019.07.18-17.17.45:410][840]LogPlayLevel: Creating play world package: /Game/Level/UEDPIE_0_Start
+[2019.07.18-17.17.45:417][840]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006502s)
+[2019.07.18-17.17.45:417][840]LogAIModule: Creating AISystem for world Start
+[2019.07.18-17.17.45:417][840]LogPlayLevel: PIE: World Init took: (0.000652s)
+[2019.07.18-17.17.45:417][840]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Level/Start.Start to /Game/Level/UEDPIE_0_Start.Start (0.007331s)
+[2019.07.18-17.17.45:451][840]LogUObjectHash: Compacting FUObjectHashTables data took   3.23ms
+[2019.07.18-17.17.45:471][840]LogInit: XAudio2 using 'Headphones (2- Rift S)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.07.18-17.17.45:480][840]LogInit: FAudioDevice initialized.
+[2019.07.18-17.17.45:486][840]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-17.17.45:539][840]LogLoad: Game class is 'BP_MPGameModeBase_C'
+[2019.07.18-17.17.45:544][840]LogWorld: Bringing World /Game/Level/UEDPIE_0_Start.Start up for play (max tick rate 0) at 2019.07.18-19.17.45
+[2019.07.18-17.17.45:544][840]LogWorld: Bringing up level for play took: 0.004015
+[2019.07.18-17.17.45:563][840]PIE: Play in editor start time for /Game/Level/UEDPIE_0_Start -0.698
+[2019.07.18-17.17.45:563][840]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.17.45:565][840]LogEngine: Changing dynamic resolution state.
+[2019.07.18-17.17.45:573][840]LogHMD: Allocating Oculus 3296 x 1776 depth rendertarget swapchain
+[2019.07.18-17.17.54:237][516]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.54:255][518]LogProfilingDebugging: Allocated a 1024 x 1024 texture for HMD canvas layer
+[2019.07.18-17.17.54:612][546]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.54:974][575]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.17.59:987][976]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.18.00:337][  4]ENEMY: Error: Found Player
+[2019.07.18-17.18.00:700][ 33]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.18.03:338][244]ENEMY: Error: Found Player
+[2019.07.18-17.18.06:350][485]ENEMY: Error: Found Player
+[2019.07.18-17.18.09:363][726]ENEMY: Error: Found Player
+[2019.07.18-17.18.12:363][966]ENEMY: Error: Found Player
+[2019.07.18-17.18.15:373][207]ENEMY: Error: Found Player
+[2019.07.18-17.18.18:385][448]ENEMY: Error: Found Player
+[2019.07.18-17.18.25:650][ 29]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.18.25:709][ 29]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-17.18.25:776][ 29]LogSlate: Window 'MajorProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.07.18-17.18.25:806][ 29]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.07.18-17.18.25:807][ 29]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.18.25:855][ 29]LogUObjectHash: Compacting FUObjectHashTables data took   3.50ms
+[2019.07.18-17.18.25:872][ 30]LogPlayLevel: Display: Destroying online subsystem :Context_33
+[2019.07.18-17.18.25:873][ 30]LogEngine: Changing dynamic resolution state.
+[2019.07.18-17.19.14:863][320]LogD3D11RHI: Timed out while waiting for GPU to catch up. (0.5 s)
+[2019.07.18-17.20.10:167][597]BlueprintLog: New page: Compile BP_Enemy
+[2019.07.18-17.20.10:367][597]LogUObjectHash: Compacting FUObjectHashTables data took   2.90ms
+[2019.07.18-17.20.12:441][770]LogTemp: Repeating last play command: VR Preview
+[2019.07.18-17.20.12:456][770]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.20.12:456][770]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.07.18-17.20.12:456][770]LogHMD: Initializing OVRPlugin session
+[2019.07.18-17.20.12:532][770]LogHMD: Allocating Oculus 3296 x 1776 rendertarget swapchain
+[2019.07.18-17.20.12:533][770]PIE: New page: PIE session: Start (Jul 18, 2019, 9:20:12 PM)
+[2019.07.18-17.20.12:534][770]LogPlayLevel: Creating play world package: /Game/Level/UEDPIE_0_Start
+[2019.07.18-17.20.12:545][770]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011449s)
+[2019.07.18-17.20.12:546][770]LogAIModule: Creating AISystem for world Start
+[2019.07.18-17.20.12:546][770]LogPlayLevel: PIE: World Init took: (0.000811s)
+[2019.07.18-17.20.12:546][770]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Level/Start.Start to /Game/Level/UEDPIE_0_Start.Start (0.012467s)
+[2019.07.18-17.20.12:581][770]LogUObjectHash: Compacting FUObjectHashTables data took   3.08ms
+[2019.07.18-17.20.12:607][770]LogInit: XAudio2 using 'Headphones (2- Rift S)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.07.18-17.20.12:616][770]LogInit: FAudioDevice initialized.
+[2019.07.18-17.20.12:624][770]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-17.20.12:680][770]LogLoad: Game class is 'BP_MPGameModeBase_C'
+[2019.07.18-17.20.12:684][770]LogWorld: Bringing World /Game/Level/UEDPIE_0_Start.Start up for play (max tick rate 0) at 2019.07.18-19.20.12
+[2019.07.18-17.20.12:684][770]LogWorld: Bringing up level for play took: 0.003539
+[2019.07.18-17.20.12:702][770]PIE: Play in editor start time for /Game/Level/UEDPIE_0_Start 0.44
+[2019.07.18-17.20.12:702][770]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.20.12:703][770]LogEngine: Changing dynamic resolution state.
+[2019.07.18-17.20.12:708][770]LogHMD: Allocating Oculus 3296 x 1776 depth rendertarget swapchain
+[2019.07.18-17.20.13:644][775]LogD3D11RHI: Timed out while waiting for GPU to catch up. (0.5 s)
+[2019.07.18-17.20.22:137][450]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.22:154][452]LogProfilingDebugging: Allocated a 1024 x 1024 texture for HMD canvas layer
+[2019.07.18-17.20.23:037][522]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.25:186][694]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.25:574][725]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.26:024][761]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.26:936][834]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.27:387][870]LogBlueprintUserMessages: [BP_FPSPlayerPawn_C_0] Hello
+[2019.07.18-17.20.27:563][884]ENEMY: Error: Found Player
+[2019.07.18-17.20.30:575][125]ENEMY: Error: Found Player
+[2019.07.18-17.20.33:574][365]ENEMY: Error: Found Player
+[2019.07.18-17.20.36:587][606]ENEMY: Error: Found Player
+[2019.07.18-17.20.39:597][847]ENEMY: Error: Found Player
+[2019.07.18-17.20.42:598][ 87]ENEMY: Error: Found Player
+[2019.07.18-17.20.45:611][328]ENEMY: Error: Found Player
+[2019.07.18-17.20.53:686][974]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.20.53:746][974]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.07.18-17.20.53:794][974]LogSlate: Window 'MajorProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.07.18-17.20.53:831][974]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.07.18-17.20.53:831][974]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Level/Start.Start:PersistentLevel' has LevelScriptBlueprint '/Game/Level/Start.Start:PersistentLevel.Start' with GeneratedClass '/Game/Level/Start.Start_C' with ClassGeneratedBy '/Game/Level/Start.Start:PersistentLevel.Start'
+[2019.07.18-17.20.53:873][974]LogUObjectHash: Compacting FUObjectHashTables data took   2.80ms
+[2019.07.18-17.20.53:892][975]LogPlayLevel: Display: Destroying online subsystem :Context_34
+[2019.07.18-17.20.53:892][975]LogEngine: Changing dynamic resolution state.
+[2019.07.18-17.21.06:480][249]BlueprintLog: New page: Compile BP_Enemy
+[2019.07.18-17.21.06:732][249]LogUObjectHash: Compacting FUObjectHashTables data took   5.12ms
