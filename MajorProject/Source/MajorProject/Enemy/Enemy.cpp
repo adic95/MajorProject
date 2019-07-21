@@ -173,3 +173,9 @@ void AEnemy::Tick(float DeltaTime)
 
 }*/
 
+void AEnemy::Collide(UActorComponent* OtherComp)
+{
+	if (OtherComp->ComponentHasTag("Weapon"))
+		Destroy();
+}
+
