@@ -29,6 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ShootWeapon();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ThrowWeapon();
 	MAJORPROJECT_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	HEADMOUNTEDDISPLAY_API UClass* Z_Construct_UClass_UMotionControllerComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
@@ -327,6 +328,10 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxGrabDistance;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParticleSys_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ParticleSys;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RightController_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RightController;
@@ -434,6 +439,14 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance = { "MaxGrabDistance", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, MaxGrabDistance), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ParticleSys_MetaData[] = {
+		{ "Category", "VR_Player_Particles" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\nParticle System\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ParticleSys = { "ParticleSys", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, ParticleSys), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ParticleSys_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ParticleSys_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController_MetaData[] = {
 		{ "Category", "VR_Player" },
 		{ "EditInline", "true" },
@@ -526,6 +539,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_GrabSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_MaxGrabDistance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ParticleSys,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightController,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_LeftController,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_RightHandMesh,
@@ -564,7 +578,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerPawn, 3334124413);
+	IMPLEMENT_CLASS(AFPSPlayerPawn, 4286933907);
 	template<> MAJORPROJECT_API UClass* StaticClass<AFPSPlayerPawn>()
 	{
 		return AFPSPlayerPawn::StaticClass();

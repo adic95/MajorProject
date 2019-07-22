@@ -155,6 +155,7 @@ void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 	//acutual line trace code and store in bool
 	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Startpos, Startpos + (1000.0f * Direction.Normalize()), ECC_Visibility, params);
 	pcurrentWeapon->m_lastfired = pcurrentWeapon->firerate;
+	UGameplayStatics::SpawnEmitterAttached(ParticleSys, pcurrentWeapon->Mesh, FName("GunMuzzle"), pcurrentWeapon->Mesh->GetSocketLocation(FName("GunMuzzle")), FRotator::ZeroRotator, EAttachLocation::SnapToTarget);
 	pcurrentWeapon->AmmoAmount--;
 
 	//if ray was sucessfully shot

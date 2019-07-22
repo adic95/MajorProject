@@ -4,14 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+//#include "EngineKismetLibraryClasses.h"
+#include "ParticleDefinitions.h"
 #include "FPSPlayerPawn.generated.h"
-
 
 #pragma region forward decleration
 class UCameraComponent;
 class UCapsuleComponent;
 class AWeapon;
 class UMotionControllerComponent;
+class UParticleSystemComponent;
 //class USkeletalMeshSocket
 #pragma endregion
 
@@ -98,6 +100,12 @@ public:
 		/// Right Motion Controller component
 		/// </summary>
 		UMotionControllerComponent* RightController;
+
+	UPROPERTY(EditAnywhere, Category = "VR_Player_Particles")
+		/// <summary>
+		/// Particle System
+		/// </summary>
+		UParticleSystem* ParticleSys;
 
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category = "Player")

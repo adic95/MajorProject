@@ -16,7 +16,7 @@ struct FVector2D;
 #endif
 #define MAJORPROJECT_FPSPlayerPawn_generated_h
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execCollide) \
 	{ \
@@ -87,7 +87,7 @@ struct FVector2D;
 	}
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execCollide) \
 	{ \
@@ -158,7 +158,7 @@ struct FVector2D;
 	}
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_INCLASS_NO_PURE_DECLS \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSPlayerPawn(); \
 	friend struct Z_Construct_UClass_AFPSPlayerPawn_Statics; \
@@ -167,7 +167,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSPlayerPawn)
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_INCLASS \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_INCLASS \
 private: \
 	static void StaticRegisterNativesAFPSPlayerPawn(); \
 	friend struct Z_Construct_UClass_AFPSPlayerPawn_Statics; \
@@ -176,7 +176,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSPlayerPawn)
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_STANDARD_CONSTRUCTORS \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFPSPlayerPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSPlayerPawn) \
@@ -189,7 +189,7 @@ private: \
 public:
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_ENHANCED_CONSTRUCTORS \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFPSPlayerPawn(AFPSPlayerPawn&&); \
@@ -200,29 +200,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPSPlayerPawn); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPSPlayerPawn)
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_PRIVATE_PROPERTY_OFFSET \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__pcurrentWeapon() { return STRUCT_OFFSET(AFPSPlayerPawn, pcurrentWeapon); }
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_19_PROLOG
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_GENERATED_BODY_LEGACY \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_21_PROLOG
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_PRIVATE_PROPERTY_OFFSET \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_INCLASS \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_STANDARD_CONSTRUCTORS \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_PRIVATE_PROPERTY_OFFSET \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_RPC_WRAPPERS \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_INCLASS \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_GENERATED_BODY \
+#define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_PRIVATE_PROPERTY_OFFSET \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_INCLASS_NO_PURE_DECLS \
-	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_22_ENHANCED_CONSTRUCTORS \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_PRIVATE_PROPERTY_OFFSET \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_INCLASS_NO_PURE_DECLS \
+	MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
