@@ -17,11 +17,60 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	MAJORPROJECT_API UClass* Z_Construct_UClass_AEnemy();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_MajorProject();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AEnemy_Collide();
+	ENGINE_API UClass* Z_Construct_UClass_UActorComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 // End Cross Module References
 	void AEnemy::StaticRegisterNativesAEnemy()
 	{
+		UClass* Class = AEnemy::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Collide", &AEnemy::execCollide },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AEnemy_Collide_Statics
+	{
+		struct Enemy_eventCollide_Parms
+		{
+			UActorComponent* OtherComp;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AEnemy_Collide_Statics::NewProp_OtherComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AEnemy_Collide_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Enemy_eventCollide_Parms, OtherComp), Z_Construct_UClass_UActorComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AEnemy_Collide_Statics::NewProp_OtherComp_MetaData, ARRAY_COUNT(Z_Construct_UFunction_AEnemy_Collide_Statics::NewProp_OtherComp_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AEnemy_Collide_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AEnemy_Collide_Statics::NewProp_OtherComp,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AEnemy_Collide_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Enemy" },
+		{ "ModuleRelativePath", "Enemy/Enemy.h" },
+		{ "ToolTip", "UFUNCTION(BlueprintCallable, Category = \"Enemy\")\nvoid ShootFromMesh();\nUFUNCTION(BlueprintCallable, Category = \"Enemy\")\nvoid PlayAnimation();" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemy_Collide_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemy, nullptr, "Collide", sizeof(Enemy_eventCollide_Parms), Z_Construct_UFunction_AEnemy_Collide_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AEnemy_Collide_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AEnemy_Collide_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AEnemy_Collide_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AEnemy_Collide()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AEnemy_Collide_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AEnemy_NoRegister()
 	{
@@ -30,6 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	struct Z_Construct_UClass_AEnemy_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -84,6 +134,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_MajorProject,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AEnemy_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEnemy_Collide, "Collide" }, // 1476803710
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "Enemy/Enemy.h" },
@@ -126,7 +179,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	{
 		((AEnemy*)Obj)->Attack = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Attack = { "Attack", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_Attack_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Attack_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Attack_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Attack = { "Attack", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_Attack_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Attack_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Attack_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -138,7 +191,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	{
 		((AEnemy*)Obj)->StartRun = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun = { "StartRun", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun = { "StartRun", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_StartRun_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -150,7 +203,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 	{
 		((AEnemy*)Obj)->Idle = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Idle = { "Idle", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemy_Statics::NewProp_Idle = { "Idle", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AEnemy), &Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_SetBit, METADATA_PARAMS(Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_MetaData, ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::NewProp_Idle_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemy_Statics::NewProp_ShootSpeed_MetaData[] = {
 		{ "Category", "Enemy" },
@@ -203,11 +256,11 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AEnemy_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::PropPointers),
 		0,
 		0x009000A0u,
@@ -222,7 +275,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemy, 2523812320);
+	IMPLEMENT_CLASS(AEnemy, 4018276933);
 	template<> MAJORPROJECT_API UClass* StaticClass<AEnemy>()
 	{
 		return AEnemy::StaticClass();

@@ -125,6 +125,12 @@ public:
 		/// 
 		/// </summary>
 		float ThrowForce;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		/// <summary>
+		/// 
+		/// </summary>
+		float ShootRange;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player")
 		bool bGrabbed;

@@ -11,6 +11,7 @@
 class UCapsuleComponent;
 class UStaticMeshComponent;
 class USkeletalMeshComponent;
+class UBoxComponent;
 #pragma endregion
 
 
@@ -29,11 +30,19 @@ public:
 		/// </summary>
 		UStaticMeshComponent* Mesh;
 
+	//UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Weapon")
+		/// <summary>
+		/// static mesh component
+		/// </summary>
+		//UBoxComponent* BoxCollision;
+
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float firerate;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		int AmmoAmount;
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		float MaxRange;
 
 
 
@@ -49,6 +58,12 @@ public:
 		/// collide with other component
 		/// </summary>
 		void Collide(UActorComponent* OtherComp);
+	
+	//UFUNCTION(BlueprintCallable, Category = "Weapon")
+		/// <summary>
+		/// collide with other component
+		/// </summary>
+		//void Collide2();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

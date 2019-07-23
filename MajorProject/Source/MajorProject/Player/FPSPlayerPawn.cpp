@@ -78,9 +78,6 @@ void AFPSPlayerPawn::Tick(float DeltaTime)
 		UpdateGrab(DeltaTime);
 	}
 
-
-	
-	
 	
 }
 
@@ -95,7 +92,7 @@ void AFPSPlayerPawn::Move(FVector2D Movement)
 	move.Z = 0.0f;
 
 	//move Player
-	AddActorWorldOffset(move);
+	AddActorWorldOffset(move, true);
 
 	//Set the camera to player location and set camera z offset
 	Camera->SetWorldLocation(GetActorLocation());
@@ -146,16 +143,19 @@ void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 	if (pcurrentWeapon->AmmoAmount <= 0)
 		return;
 	
+	FTransform ParticleSocketTransform = FTransform(FRotator::ZeroRotator,pcurrentWeapon
+	->Mesh->GetSocketLocation(FName("GunMuzzle")),FVector(0.25f,0.25f,0.25f));
+
 	//create hit result variable
 	FHitResult hit;
 	//creating collision params and ignoring the player
 	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), false, this);
 	//Draw ray for debug purposes
-	DrawDebugLine(GetWorld(), Startpos, Startpos + (1000.f * Direction.Normalize()), FColor::Green, false, 1, 0, 1);
+	//DrawDebugLine(GetWorld(), Startpos, Startpos + (1000.f * Direction.Normalize()), FColor::Green, false, 1, 0, 1);
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ParticleSys, ParticleSocketTransform);
 	//acutual line trace code and store in bool
-	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Startpos, Startpos + (1000.0f * Direction.Normalize()), ECC_Visibility, params);
+	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.Normalize()), ECC_Visibility, params);
 	pcurrentWeapon->m_lastfired = pcurrentWeapon->firerate;
-	UGameplayStatics::SpawnEmitterAttached(ParticleSys, pcurrentWeapon->Mesh, FName("GunMuzzle"), pcurrentWeapon->Mesh->GetSocketLocation(FName("GunMuzzle")), FRotator::ZeroRotator, EAttachLocation::SnapToTarget);
 	pcurrentWeapon->AmmoAmount--;
 
 	//if ray was sucessfully shot
@@ -166,6 +166,7 @@ void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 		{
 			//log this message
 			GEngine->AddOnScreenDebugMessage(100, 3, FColor::Emerald, FString::Printf(TEXT("Hit!")));
+			hit.Actor->Destroy();
 		}
 	}
 }
@@ -177,7 +178,6 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 		GEngine->AddOnScreenDebugMessage(1, 5, FColor::Emerald, FString::Printf(TEXT("Process!")));
 		return;
 	}
-
 	//creat hit result variable
 	FHitResult hit;
 	//creating collision params and ignoring the player
@@ -202,13 +202,16 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 			//bisGrabbing = true;
 			FAttachmentTransformRules rules = FAttachmentTransformRules::SnapToTargetNotIncludingScale;
 			rules.bWeldSimulatedBodies = true;
-			pcurrentWeapon->Mesh->SetSimulatePhysics(false);
 
-			pcurrentWeapon->SetActorEnableCollision(false);
+			//pcurrentWeapon->SetActorEnableCollision(false);
+
 			bGrabbed = true;
 			pcurrentWeapon->SetActorLocation(RightHandMesh->GetSocketLocation(FName("WeaponSocket")));
 			pcurrentWeapon->Mesh->SetRelativeLocation(FVector::ZeroVector);
 			pcurrentWeapon->Mesh->AttachToComponent(Origin, rules, FName("WeaponSocket"));
+
+			pcurrentWeapon->Mesh->SetSimulatePhysics(false);
+			pcurrentWeapon->SetActorEnableCollision(true);
 		}
 	}
 }
@@ -250,6 +253,7 @@ void AFPSPlayerPawn::Collide(UActorComponent * OtherComp)
 
 void AFPSPlayerPawn::UpdateGrab(float DeltaTime)
 {
+	return;
 	if (!pcurrentWeapon || !bisGrabbing)
 		return;
 

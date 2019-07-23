@@ -45,19 +45,19 @@ public:
 		/// </summary>
 		float ShootSpeed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 		/// <summary>
 		/// Bool for Animation
 		/// </summary>
 		bool Idle;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 		/// <summary>
 		/// Bool for Animation
 		/// </summary>
 		bool StartRun;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Enemy")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy")
 		/// <summary>
 		/// Bool for Animation
 		/// </summary>
@@ -102,6 +102,9 @@ public:
 		//void ShootFromMesh();
 	//UFUNCTION(BlueprintCallable, Category = "Enemy")
 		//void PlayAnimation();
+	UFUNCTION(BlueprintCallable,Category = "Enemy")
+	void Collide(UActorComponent* OtherComp);
+
 	
 private:
 #pragma region private variables
@@ -128,7 +131,6 @@ private:
 	/// </summary>
 	/// <param name="Start">start scene component reference</param>
 	//void Shoot(USceneComponent* Start);
-	void Collide(UActorComponent* OtherComp);
 
 
 	

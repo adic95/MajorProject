@@ -5,6 +5,8 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/BoxComponent.h"
+
 
 // Sets default values
 AWeapon::AWeapon()
@@ -20,6 +22,9 @@ AWeapon::AWeapon()
 	// create default skeletal mesh component and attach to camera
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(pRoot);
+	
+	//BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision"));
+	//BoxCollision->SetupAttachment(Mesh);
 
 	// add tag
 	Tags.Add("Weapon");
@@ -27,6 +32,7 @@ AWeapon::AWeapon()
 
 	
 }
+
 
 // Called when the game starts or when spawned
 void AWeapon::BeginPlay()

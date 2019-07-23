@@ -8,13 +8,36 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UActorComponent;
 #ifdef MAJORPROJECT_Enemy_generated_h
 #error "Enemy.generated.h already included, missing '#pragma once' in Enemy.h"
 #endif
 #define MAJORPROJECT_Enemy_generated_h
 
-#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS
-#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execCollide) \
+	{ \
+		P_GET_OBJECT(UActorComponent,Z_Param_OtherComp); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Collide(Z_Param_OtherComp); \
+		P_NATIVE_END; \
+	}
+
+
+#define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCollide) \
+	{ \
+		P_GET_OBJECT(UActorComponent,Z_Param_OtherComp); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Collide(Z_Param_OtherComp); \
+		P_NATIVE_END; \
+	}
+
+
 #define MajorProject_Source_MajorProject_Enemy_Enemy_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEnemy(); \
