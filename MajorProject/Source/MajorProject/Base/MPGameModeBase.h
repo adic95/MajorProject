@@ -82,6 +82,7 @@ private:
 	/// all enemy spawn positions
 	/// </summary>
 	TArray<FVector> m_spawnPos;
+	TArray<FVector> m_WpnsSpawnPos;
 
 	// Spawnpoint position of Weapon Stash
 	FVector m_weaponSpawnpos;

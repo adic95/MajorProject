@@ -67,7 +67,7 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 		// get random spawn points out of array and spawn enemys in a random radius around them
 		FVector spawnpos = m_spawnPos[FMath::RandRange(0, m_spawnPos.Num() - 1)];
-		spawnpos += FVector(FMath::RandRange(-500.f, +500.f), FMath::RandRange(-500.f, +500.f), 0.0f);
+		spawnpos += FVector(FMath::RandRange(-50.f, +50.f), FMath::RandRange(-50.f, +50.f), 0.0f);
 
 		//spawn enemy
 
@@ -77,6 +77,9 @@ void AMPGameModeBase::Tick(float DeltaTime)
 		//decrease Enemy Count of wave
 		Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount--;
 		
+		m_weaponSpawnpos= m_WpnsSpawnPos[FMath::RandRange(0, m_spawnPos.Num() - 1)];
+		m_weaponSpawnpos += FVector(FMath::RandRange(-200.f, +200.f),FMath::RandRange(-200.f, +200.f), 0.f);
+
 		//Spawn random element of weapons array at Spawnpoint position
 		AWeapon* pWeapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass[FMath::RandRange(0, WeaponClass.Num() -1)],m_weaponSpawnpos, FRotator::ZeroRotator);
 		
@@ -140,7 +143,8 @@ void AMPGameModeBase::BeginPlay()
 	// get position of all weapon Spawnpoints in scene and store in variable
 	for (TActorIterator<AWeaponSpawnPoint> ActorItr(GetWorld()); ActorItr; ++ActorItr) 
 	{
-		m_weaponSpawnpos = ActorItr->GetActorLocation();
+		m_WpnsSpawnPos.Add(ActorItr->GetActorLocation());
+
 	}
 	
 	

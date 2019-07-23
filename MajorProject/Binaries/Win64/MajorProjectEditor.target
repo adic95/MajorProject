@@ -9,8 +9,8 @@
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 22,
-		"PatchVersion": 3,
-		"Changelist": 7053642,
+		"PatchVersion": 2,
+		"Changelist": 6574378,
 		"CompatibleChangelist": 5660361,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 1,
@@ -26,14 +26,6 @@
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/UE4Editor-Cmd.exe",
 			"Type": "Executable"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/PathFollow/Binaries/Win64/UE4Editor-PathFollow.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/PathFollow/Binaries/Win64/UE4Editor-PathFollow.pdb",
-			"Type": "SymbolFile"
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll",
@@ -1868,10 +1860,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/PathFollow/Binaries/Win64/UE4Editor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -2183,10 +2171,6 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/MajorProject.uproject",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/PathFollow/PathFollow.uplugin",
 			"Type": "UFS"
 		},
 		{
