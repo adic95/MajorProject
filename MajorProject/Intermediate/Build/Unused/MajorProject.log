@@ -1,15 +1,21 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Projekte\MajorProject_3.0).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Adi Custovic\MajorProject_3.0).
   Creating makefile for MajorProjectEditor (ini files are newer than makefile)
   Parsing headers for MajorProjectEditor
-    Running UnrealHeaderTool "D:\Projekte\MajorProject_3.0\MajorProject\MajorProject.uproject" "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for MajorProjectEditor in 4,6082862 seconds
-  Using Visual Studio 2019 14.21.27702 toolchain (D:\Programms\VS\VC\Tools\MSVC\14.21.27702) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 12 processes...
-    [1/4] MPGameModeBase.cpp
-    [2/4] UE4Editor-MajorProject-0001.lib
-       Bibliothek "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.lib" und Objekt "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.exp" werden erstellt.
-    [3/4] UE4Editor-MajorProject-0001.dll
-       Bibliothek "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.suppressed.lib" und Objekt "D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0001.suppressed.exp" werden erstellt.
-    [4/4] MajorProjectEditor.target
-  Total time in Parallel executor: 2,32 seconds
-  Total execution time: 8,42 seconds
+    Running UnrealHeaderTool "D:\Adi Custovic\MajorProject_3.0\MajorProject\MajorProject.uproject" "D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\MajorProjectEditor\Development\MajorProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for MajorProjectEditor in 5.1550856 seconds
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 8 actions with 8 processes...
+    [1/8] MajorProject.init.gen.cpp
+    [2/8] MPGameModeBase.gen.cpp
+    [3/8] MPGameModeBase.cpp
+    [4/8] FPSPlayerPawn.cpp
+D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject\Player\FPSPlayerPawn.cpp(278): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/SceneComponent.h(659): note: see declaration of 'USceneComponent::AttachTo'
+    [5/8] Enemy.cpp
+    [6/8] UE4Editor-MajorProject-0062.lib
+       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0062.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0062.exp
+    [7/8] UE4Editor-MajorProject-0062.dll
+       Creating library D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0062.suppressed.lib and object D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\UE4Editor-MajorProject-0062.suppressed.exp
+    [8/8] MajorProjectEditor.target
+  Total time in Parallel executor: 15.29 seconds
+  Total execution time: 22.32 seconds

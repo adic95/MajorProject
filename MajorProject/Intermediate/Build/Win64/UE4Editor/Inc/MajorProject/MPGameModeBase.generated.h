@@ -13,8 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MAJORPROJECT_MPGameModeBase_generated_h
 
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS
-#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetPlayerScore) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetPlayerScore(); \
+		P_NATIVE_END; \
+	}
+
+
+#define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetPlayerScore) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetPlayerScore(); \
+		P_NATIVE_END; \
+	}
+
+
 #define MajorProject_Source_MajorProject_Base_MPGameModeBase_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMPGameModeBase(); \

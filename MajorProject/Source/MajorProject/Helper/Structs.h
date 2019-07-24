@@ -30,6 +30,13 @@ struct FEnemyWave
 		/// </summary>
 		float SpawnTimer;
 
+	UPROPERTY(EditAnywhere, Category = "Weapon Spawn")
+		/// <summary>
+		/// time until one enemy spawns in seconds
+		/// </summary>
+		float WeaponTimer;
+
+
 	UPROPERTY(EditAnywhere, Category = "Enemy Wave")
 		/// <summary>
 		/// enemy count

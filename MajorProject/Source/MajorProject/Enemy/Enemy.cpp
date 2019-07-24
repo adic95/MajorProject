@@ -136,7 +136,7 @@ void AEnemy::Tick(float DeltaTime)
 	}
 
 	//Move enemy
-	AddActorWorldOffset(m_dir * DeltaTime * MovementSpeed);
+	AddActorWorldOffset(m_dir * DeltaTime * MovementSpeed,true);
 
 	
 

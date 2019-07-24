@@ -142,6 +142,7 @@ private:
 	TArray<FVector> m_handPositions;
 	FVector  m_tmpPos;
 	FVector m_throwDir;
+	//AGameModeBase* gm;
 
 	protected:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Player")

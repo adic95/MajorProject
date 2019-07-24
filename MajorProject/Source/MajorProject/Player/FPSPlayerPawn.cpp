@@ -7,11 +7,14 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h" 
+#include "Base/MPGameModeBase.h"
 #include "Engine/World.h"
 #include "Weapon\Weapon.h"
 #include "HeadMountedDisplay/Public/MotionControllerComponent.h"
 #pragma region helper include for line tracing
 #include "DrawDebugHelpers.h"
+#include "Engine/Engine.h"
+#include "Kismet/KismetMathLibrary.h"
 #pragma endregion
 
 // Sets default values
@@ -112,7 +115,8 @@ void AFPSPlayerPawn::ShootWeapon()
 {
 	if (!pcurrentWeapon || pcurrentWeapon->ActorHasTag("Melee") || pcurrentWeapon->m_lastfired > 0)
 		return;
-	Shoot(pcurrentWeapon->Mesh->GetSocketLocation(FName("GunMuzzle")),pcurrentWeapon->Mesh->GetForwardVector());
+	//FVector forward = UKismetMathLibrary::GreaterGreater_VectorRotator(FVector::ForwardVector, pcurrentWeapon->Mesh->GetSocketRotation(FName("GunMuzzle")));
+	Shoot(pcurrentWeapon->Mesh->GetSocketLocation(FName("GunMuzzle")), pcurrentWeapon->Mesh->GetForwardVector());
 }
 
 //rotate Camera
@@ -149,21 +153,24 @@ void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 	//create hit result variable
 	FHitResult hit;
 	//creating collision params and ignoring the player
-	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), false, this);
+	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), true, this);
 	//Draw ray for debug purposes
-	//DrawDebugLine(GetWorld(), Startpos, Startpos + (1000.f * Direction.Normalize()), FColor::Green, false, 1, 0, 1);
+	DrawDebugLine(GetWorld(), Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.GetSafeNormal()), FColor::Green, false, 1, 0, 1);
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ParticleSys, ParticleSocketTransform);
 	//acutual line trace code and store in bool
-	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.Normalize()), ECC_Visibility, params);
+	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.GetSafeNormal()), ECC_Visibility, params);
 	pcurrentWeapon->m_lastfired = pcurrentWeapon->firerate;
 	pcurrentWeapon->AmmoAmount--;
 
 	//if ray was sucessfully shot
 	if (isHit)
 	{
+		GEngine->AddOnScreenDebugMessage(444, 3, FColor::Emerald, hit.Actor->GetName());
 		//if ray hit object with a collision component
 		if (hit.Actor->ActorHasTag("Enemy"))
 		{
+			AMPGameModeBase::PlayerScore += 200;
+			AMPGameModeBase::m_killedEnemies++;
 			//log this message
 			GEngine->AddOnScreenDebugMessage(100, 3, FColor::Emerald, FString::Printf(TEXT("Hit!")));
 			hit.Actor->Destroy();
@@ -186,7 +193,7 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 	DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FColor::Red, false, 1, 0, 1);
 	//acutual line trace code and store in bool
 	//bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
-	bool isHit = GetWorld()->SweepSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), ECC_Visibility,FCollisionShape::MakeSphere(32.f), params);
+	bool isHit = GetWorld()->SweepSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), ECC_Visibility,FCollisionShape::MakeSphere(64.0f), params);
 	FVector WeaponLocation;
 	FVector Flydir;
 	//FName WeaponSocket = TEXT("WeaponSocket");

@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MAJORPROJECT_Structs_generated_h
 
-#define MajorProject_Source_MajorProject_Helper_Structs_h_53_GENERATED_BODY \
+#define MajorProject_Source_MajorProject_Helper_Structs_h_60_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEnemyRound_Statics; \
 	MAJORPROJECT_API static class UScriptStruct* StaticStruct();
 

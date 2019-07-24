@@ -49,6 +49,16 @@ public:
 	///declare Array of Subclasses of Weapons for weapon stash
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon")
 		TArray <TSubclassOf<AWeapon>> WeaponClass;
+
+	static  int m_killedEnemies;
+
+	
+	static int PlayerScore;
+
+
+	UFUNCTION(BlueprintCallable)
+		int GetPlayerScore();
+
 #pragma endregion
 
 protected:
@@ -75,6 +85,8 @@ private:
 	/// timer to spawn enemy
 	/// </summary>
 	float m_enemyTimer;
+
+	float m_WeaponTimer;
 #pragma endregion
 
 #pragma region private variable
@@ -87,6 +99,9 @@ private:
 	// Spawnpoint position of Weapon Stash
 	FVector m_weaponSpawnpos;
 	FVector m_EnemyPos;
+
+
+	AWeapon* pWeapon;
 
 
 #pragma endregion

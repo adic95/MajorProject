@@ -144,6 +144,10 @@ static struct FScriptStruct_MajorProject_StaticRegisterNativesFEnemyWave
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_EnemyCount;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponTimer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_WeaponTimer;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnTimer_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpawnTimer;
@@ -181,6 +185,14 @@ static struct FScriptStruct_MajorProject_StaticRegisterNativesFEnemyWave
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_EnemyCount = { "EnemyCount", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEnemyWave, EnemyCount), METADATA_PARAMS(Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_EnemyCount_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_EnemyCount_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_WeaponTimer_MetaData[] = {
+		{ "Category", "Weapon Spawn" },
+		{ "ModuleRelativePath", "Helper/Structs.h" },
+		{ "ToolTip", "<summary>\ntime until one enemy spawns in seconds\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_WeaponTimer = { "WeaponTimer", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEnemyWave, WeaponTimer), METADATA_PARAMS(Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_WeaponTimer_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_WeaponTimer_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_SpawnTimer_MetaData[] = {
 		{ "Category", "Enemy Wave" },
 		{ "ModuleRelativePath", "Helper/Structs.h" },
@@ -199,6 +211,7 @@ static struct FScriptStruct_MajorProject_StaticRegisterNativesFEnemyWave
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FEnemyWave_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_EnemyClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_EnemyCount,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_WeaponTimer,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_SpawnTimer,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEnemyWave_Statics::NewProp_StartTime,
 	};
@@ -230,7 +243,7 @@ static struct FScriptStruct_MajorProject_StaticRegisterNativesFEnemyWave
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FEnemyWave_Hash() { return 572825065U; }
+	uint32 Get_Z_Construct_UScriptStruct_FEnemyWave_Hash() { return 876249908U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)
