@@ -1,3 +1,3 @@
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject\MajorProject.Build.cs
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject.Target.cs
-D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProjectEditor.Target.cs
+D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject\MajorProject.Build.cs
+D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject.Target.cs
+D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProjectEditor.Target.cs
