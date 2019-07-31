@@ -49,8 +49,6 @@ void AWeapon::Tick(float DeltaTime)
 
 	if (m_lastfired > 0)
 		m_lastfired -= DeltaTime;
-	FVector forward = UKismetMathLibrary::GreaterGreater_VectorRotator(FVector::ForwardVector, Mesh->GetSocketRotation(FName("GunMuzzle")));
-	DrawDebugLine(GetWorld(), Mesh->GetSocketLocation(FName("GunMuzzle")), Mesh->GetSocketLocation(FName("GunMuzzle")) + 5 * forward, FColor::Green, false, DeltaTime * 2, 0, 1);
 }
 
 void AWeapon::Collide(UActorComponent* OtherComp)

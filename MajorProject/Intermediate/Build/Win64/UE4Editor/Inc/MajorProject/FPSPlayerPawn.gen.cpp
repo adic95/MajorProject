@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	MAJORPROJECT_API UClass* Z_Construct_UClass_AFPSPlayerPawn();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_MajorProject();
+	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_Collide();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent_NoRegister();
 	MAJORPROJECT_API UFunction* Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance();
@@ -39,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	{
 		UClass* Class = AFPSPlayerPawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "ChangeLevelOnPress", &AFPSPlayerPawn::execChangeLevelOnPress },
 			{ "Collide", &AFPSPlayerPawn::execCollide },
 			{ "GrabFromDistance", &AFPSPlayerPawn::execGrabFromDistance },
 			{ "Move", &AFPSPlayerPawn::execMove },
@@ -49,6 +51,28 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 			{ "ThrowWeapon", &AFPSPlayerPawn::execThrowWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSPlayerPawn, nullptr, "ChangeLevelOnPress", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AFPSPlayerPawn_Collide_Statics
 	{
@@ -316,6 +340,10 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		static void NewProp_bGrabbed_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bGrabbed;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerHitPoints_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_PlayerHitPoints;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShootRange_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ShootRange;
@@ -384,6 +412,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_MajorProject,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFPSPlayerPawn_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AFPSPlayerPawn_ChangeLevelOnPress, "ChangeLevelOnPress" }, // 3562976657
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_Collide, "Collide" }, // 1168161109
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_GrabFromDistance, "GrabFromDistance" }, // 1015442491
 		{ &Z_Construct_UFunction_AFPSPlayerPawn_Move, "Move" }, // 2716425102
@@ -418,6 +447,14 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		((AFPSPlayerPawn*)Obj)->bGrabbed = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_bGrabbed = { "bGrabbed", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AFPSPlayerPawn), &Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_bGrabbed_SetBit, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_bGrabbed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_bGrabbed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_PlayerHitPoints_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/FPSPlayerPawn.h" },
+		{ "ToolTip", "<summary>\n\n</summary>" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_PlayerHitPoints = { "PlayerHitPoints", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, PlayerHitPoints), METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_PlayerHitPoints_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_PlayerHitPoints_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ShootRange_MetaData[] = {
 		{ "Category", "Player" },
@@ -511,7 +548,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		{ "ToolTip", "<summary>\ncollision capsule component\n</summary>" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision = { "Collision", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, Collision), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision = { "Collision", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSPlayerPawn, Collision), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Collision_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_Camera_MetaData[] = {
 		{ "Category", "Player" },
@@ -548,6 +585,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSPlayerPawn_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_pcurrentWeapon,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_bGrabbed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_PlayerHitPoints,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ShootRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_ThrowForce,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSPlayerPawn_Statics::NewProp_GrabSpeed,
@@ -591,7 +629,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSPlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSPlayerPawn, 2110868173);
+	IMPLEMENT_CLASS(AFPSPlayerPawn, 3756201980);
 	template<> MAJORPROJECT_API UClass* StaticClass<AFPSPlayerPawn>()
 	{
 		return AFPSPlayerPawn::StaticClass();

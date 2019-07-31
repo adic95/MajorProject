@@ -6,6 +6,8 @@
 #include "Spawnpoints\EnemySpawnPoint.h"
 #include "Spawnpoints\WeaponSpawnPoint.h"
 #include "Weapon\Weapon.h"
+#include "Kismet/GameplayStatics.h" 
+
 
 //#include "Engine.h"
 #include "EngineUtils.h" 
@@ -17,6 +19,7 @@ int AMPGameModeBase::PlayerScore = 0;
 AMPGameModeBase::AMPGameModeBase()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	
 }
 
 void AMPGameModeBase::Tick(float DeltaTime)
@@ -38,12 +41,17 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 		}
 	}
-	GEngine->AddOnScreenDebugMessage(5555, DeltaTime, FColor::Red, FString::Printf(TEXT("RoundNumber %i"), m_currentRound));
+	
 	//Gamemode logic
 
-	// if current higher than total rounds return
+	// if current round higher  than total rounds return
 	if (m_currentRound > Rounds.Num())
+	{
+		
 		return;
+
+	}
+
 
 
 
@@ -55,19 +63,9 @@ void AMPGameModeBase::Tick(float DeltaTime)
 		m_enemyTimer -= DeltaTime;
 		m_WeaponTimer -=  DeltaTime;
 
-		// log enemy round
-		FString text = "ENEMY ROUND: " + FString::FromInt(m_currentRound);
-		GEngine->AddOnScreenDebugMessage(100, DeltaTime, FColor::Red, text);
+		
 
-		// log enemy wave
-		text = "ENEMY WAVE: " + FString::FromInt(m_currentWave);
-		GEngine->AddOnScreenDebugMessage(101, DeltaTime, FColor::Red, text);
-
-		// log enemy count
-		text = "ENEMY COUNT: " + FString::FromInt(Rounds[m_currentRound - 1].Waves[m_currentWave - 1].EnemyCount);
-		GEngine->AddOnScreenDebugMessage(102, DeltaTime, FColor::Red, text);
-
-		GEngine->AddOnScreenDebugMessage(103, 2, FColor::Orange, FString::FromInt(m_WeaponTimer));
+		
 
 		if (m_WeaponTimer <= 0)
 		{
@@ -77,18 +75,7 @@ void AMPGameModeBase::Tick(float DeltaTime)
 
 
 		}
-		//---------------------------DEBUG-------------------------------------------------
-		/*if (pWeapon != nullptr)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Blue, TEXT(" Weapon Spawned"));
-		}
-
-		else
-		{
-			GEngine->AddOnScreenDebugMessage(50, 2, FColor::Blue, TEXT(" Weapon not Spawned"));
-
-		}*/
-		// if enemy timer higher than zero return
+		
 		if (m_enemyTimer > 0.0f)
 			return;
 
@@ -115,11 +102,7 @@ void AMPGameModeBase::Tick(float DeltaTime)
 		m_weaponSpawnpos += FVector(FMath::RandRange(-200.0f, +200.0f), FMath::RandRange(-200.0f, +200.0f), 50.0f);
 
 
-		//Spawn random element of weapons array at Spawnpoint position
-
-
-
-		//---------------------------------DEBUG-----------------------------------------------
+		
 
 
 		// if enemy count higher than zero return
@@ -166,9 +149,21 @@ int AMPGameModeBase::GetPlayerScore()
 	return PlayerScore;
 }
 
+int AMPGameModeBase::GetPlayerRound()
+{
+	return m_currentRound;
+}
+
+int AMPGameModeBase::GetPlayerWave()
+{
+	return m_currentWave;
+}
+
 void AMPGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	pPlayer = Cast<AFPSPlayerPawn>(UGameplayStatics::GetPlayerController(GetWorld(),0)->GetPawn());
 	//check all spoint points
 	for (TActorIterator<AEnemySpawnPoint> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
@@ -183,6 +178,8 @@ void AMPGameModeBase::BeginPlay()
 		m_WpnsSpawnPos.Add(ActorItr->GetActorLocation());
 
 	}
-
+	PlayerScore = 0;
 
 }
+
+

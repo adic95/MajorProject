@@ -1,5 +1,5 @@
-D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
-D:\Programms\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\Programms\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Projekte\MajorProject_3.0\MajorProject\Source\MajorProject/Enemy/Enemy.h
-D:\Projekte\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Inc\MajorProject\Enemy.generated.h
+D:\Adi Custovic\MajorProject_3.0\MajorProject\Intermediate\Build\Win64\UE4Editor\Development\MajorProject\Definitions.MajorProject.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Adi Custovic\MajorProject_3.0\MajorProject\Source\MajorProject/Enemy/Enemy.h
+d:\adi custovic\majorproject_3.0\majorproject\intermediate\build\win64\ue4editor\inc\majorproject\Enemy.generated.h

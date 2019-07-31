@@ -42,6 +42,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		int AmmoAmount;
 	UPROPERTY(EditAnywhere, Category = "Weapon")
+		int LifeSpan;
+	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float MaxRange;
 
 

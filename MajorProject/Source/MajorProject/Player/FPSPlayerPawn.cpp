@@ -1,5 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#define TIME_BETWEEN_HITS 1.0f
 
 #include "FPSPlayerPawn.h"
 #include "Camera/CameraComponent.h"
@@ -75,12 +76,7 @@ void AFPSPlayerPawn::BeginPlay()
 void AFPSPlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (bisGrabbing)
-	{
-		UpdateGrab(DeltaTime);
-	}
-
+	m_timebetweenhit -= DeltaTime;
 	
 }
 
@@ -155,7 +151,7 @@ void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 	//creating collision params and ignoring the player
 	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), true, this);
 	//Draw ray for debug purposes
-	DrawDebugLine(GetWorld(), Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.GetSafeNormal()), FColor::Green, false, 1, 0, 1);
+	//DrawDebugLine(GetWorld(), Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.GetSafeNormal()), FColor::Green, false, 1, 0, 1);
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ParticleSys, ParticleSocketTransform);
 	//acutual line trace code and store in bool
 	bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Startpos, Startpos + (pcurrentWeapon->MaxRange * Direction.GetSafeNormal()), ECC_Visibility, params);
@@ -165,14 +161,12 @@ void AFPSPlayerPawn::Shoot(FVector Startpos, FVector Direction)
 	//if ray was sucessfully shot
 	if (isHit)
 	{
-		GEngine->AddOnScreenDebugMessage(444, 3, FColor::Emerald, hit.Actor->GetName());
 		//if ray hit object with a collision component
 		if (hit.Actor->ActorHasTag("Enemy"))
 		{
-			AMPGameModeBase::PlayerScore += 200;
+			AMPGameModeBase::PlayerScore += 100;
 			AMPGameModeBase::m_killedEnemies++;
 			//log this message
-			GEngine->AddOnScreenDebugMessage(100, 3, FColor::Emerald, FString::Printf(TEXT("Hit!")));
 			hit.Actor->Destroy();
 		}
 	}
@@ -182,28 +176,36 @@ void AFPSPlayerPawn::GrabFromDistance(USceneComponent* Origin)
 {
 	if (pcurrentWeapon)
 	{
-		GEngine->AddOnScreenDebugMessage(1, 5, FColor::Emerald, FString::Printf(TEXT("Process!")));
 		return;
 	}
 	//creat hit result variable
 	FHitResult hit;
 	//creating collision params and ignoring the player
 	FCollisionQueryParams params = FCollisionQueryParams(FName(TEXT("")), false, this);
+	FCollisionObjectQueryParams ObjParams = FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody);
+
 	//Draw ray for debug purposes
-	DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FColor::Red, false, 1, 0, 1);
+	//DrawDebugLine(GetWorld(), Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FColor::Red, false, 1, 0, 1);
 	//acutual line trace code and store in bool
 	//bool isHit = GetWorld()->LineTraceSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), ECC_Visibility, params);
-	bool isHit = GetWorld()->SweepSingleByChannel(hit, Origin->GetComponentLocation(), Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()), FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), ECC_Visibility,FCollisionShape::MakeSphere(64.0f), params);
+	bool isHit = GetWorld()->SweepSingleByObjectType
+	(
+		hit, 
+		Origin->GetComponentLocation(), 
+		Origin->GetComponentLocation() + (MaxGrabDistance * Origin->GetForwardVector()),
+		FQuat::FQuat(LeftHandMesh->GetSocketRotation(FName ("WeaponSocket"))), 
+		ObjParams,
+		FCollisionShape::MakeSphere(64.f), 
+		params
+	);
 	FVector WeaponLocation;
 	FVector Flydir;
 	//FName WeaponSocket = TEXT("WeaponSocket");
 	if (isHit)
 	{
-		GEngine->AddOnScreenDebugMessage(2, 5, FColor::Emerald, FString::Printf(TEXT("Hit!")));
 
 		if (hit.Actor->ActorHasTag("Weapon"))
 		{
-			GEngine->AddOnScreenDebugMessage(3, 5, FColor::Emerald, FString::Printf(TEXT("Weapon!")));
 
 			pcurrentWeapon = Cast<AWeapon>(hit.Actor);
 			//bisGrabbing = true;
@@ -233,7 +235,10 @@ void AFPSPlayerPawn::ThrowWeapon()
 	pcurrentWeapon->AddActorWorldOffset(m_throwDir *UGameplayStatics::GetWorldDeltaSeconds(GetWorld()) * ThrowForce);
 	pcurrentWeapon->Mesh->SetSimulatePhysics(true);
 	pcurrentWeapon->SetActorEnableCollision(true);
+	pcurrentWeapon->SetLifeSpan(pcurrentWeapon->LifeSpan + 1);
 	pcurrentWeapon = nullptr;
+	
+	
 }
 
 void AFPSPlayerPawn::RecordPositions()
@@ -253,39 +258,19 @@ void AFPSPlayerPawn::RecordPositions()
 
 void AFPSPlayerPawn::Collide(UActorComponent * OtherComp)
 {
-	if (OtherComp->ComponentHasTag("Damage"))
-		GEngine->AddOnScreenDebugMessage(16, 5, FColor::Emerald, FString::Printf(TEXT("DAMAGE!")));
-	
-}
-
-void AFPSPlayerPawn::UpdateGrab(float DeltaTime)
-{
-	return;
-	if (!pcurrentWeapon || !bisGrabbing)
-		return;
-
-	float dist = FVector::Distance(pcurrentWeapon->GetActorLocation(), GetActorLocation());
-	float perc = dist / MaxGrabDistance;
-	perc = FMath::Clamp(perc - DeltaTime * GrabSpeed,0.0f,1.0f);
-	FVector dir = pcurrentWeapon->GetActorLocation() - GetActorLocation();
-	FVector point2 = GetActorLocation() + dir * MaxGrabDistance;
-	pcurrentWeapon->SetActorLocation(FMath::Lerp(GetActorLocation(), point2, perc));
-	
-	//GEngine->AddOnScreenDebugMessage(4, 5, FColor::Emerald, FString::Printf(TEXT(FString::SanitizeFloat(perc))));
-	if (perc == 0)
+	if (m_timebetweenhit <= 0)
 	{
-		bisGrabbing = false;
-		pcurrentWeapon->GetRootComponent()->AttachTo((USceneComponent*)GetOwner());
-		GEngine->AddOnScreenDebugMessage(5, 5, FColor::Emerald, FString::Printf(TEXT("Done!")));
-	}
+		if (OtherComp->ComponentHasTag("Damage"))
+		{
+			PlayerHitPoints--;
+			m_timebetweenhit = TIME_BETWEEN_HITS;
+		}
+	}	
 }
 
-// Called to bind functionality to input
-/*void AFPSPlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AFPSPlayerPawn::ChangeLevelOnPress()
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}*/
-
+	UGameplayStatics::OpenLevel(GetWorld(), "Final_Level");
+}
 
 

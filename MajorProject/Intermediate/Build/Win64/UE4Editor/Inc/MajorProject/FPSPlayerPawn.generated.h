@@ -18,6 +18,14 @@ struct FVector2D;
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execChangeLevelOnPress) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ChangeLevelOnPress(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execCollide) \
 	{ \
 		P_GET_OBJECT(UActorComponent,Z_Param_OtherComp); \
@@ -88,6 +96,14 @@ struct FVector2D;
 
 
 #define MajorProject_Source_MajorProject_Player_FPSPlayerPawn_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execChangeLevelOnPress) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ChangeLevelOnPress(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execCollide) \
 	{ \

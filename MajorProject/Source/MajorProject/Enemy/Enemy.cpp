@@ -17,8 +17,7 @@
 /// </summary>
 #pragma region macro
 #define LOG(TEXT, TIME)												\
-	GEngine->AddOnScreenDebugMessage(-1, TIME, FColor::Red, TEXT);	\
-	GLog->Log("ENEMY", ELogVerbosity::Error, TEXT); 
+
 #pragma endregion
 
 /// <summary>
@@ -63,7 +62,6 @@ void AEnemy::BeginPlay()
 		{
 			//set reference to player
 			pPlayer = *ActorItr;
-			LOG("Found Player", 10.f);
 		}
 	}
 }
@@ -86,16 +84,6 @@ void AEnemy::Tick(float DeltaTime)
 		//reset direction to zero
 		m_dir = FVector::ZeroVector;
 
-		//increase Shoot timer
-		//m_shootTimer += DeltaTime;
-
-		//if shoot timer under 1/ ShootSpeed return
-		/*if (m_shootTimer < 1 / ShootSpeed)
-			return;*/
-		
-		
-		//reset shoot timer
-		//m_shootTimer = 0.0f;
 
 
 		//Calc direction to player
@@ -128,7 +116,7 @@ void AEnemy::Tick(float DeltaTime)
 	// if player is not in distance
 	else
 	{
-		//reset
+		//resetand switch to idle
 		m_dir = FVector::ZeroVector;
 		StartRun = false;
 		Attack = false;
@@ -141,37 +129,6 @@ void AEnemy::Tick(float DeltaTime)
 	
 
 }
-
-/*void AEnemy::PlayAnimation()
-{
-	
-	if ((pPlayer->GetActorLocation() - GetActorLocation()).Size() >= StrikeDistance)
-	{
-		Attack = true;
-	}
-	
-}*/
-
-
-
-/*void AEnemy::ShootFromMesh()
-{
-	//Shoot(Collision);
-}*/
-
-/*void AEnemy::Shoot(USceneComponent* Start)
-{
-	if (m_lastfired > 0 || (pPlayer->GetActorLocation() - GetActorLocation()).Size() >= ShootDistance)
-		return;
-
-	FHitResult hit;
-	FCollisionQueryParams params;
-	DrawDebugLine(GetWorld(), Start->GetComponentLocation(), Start->GetComponentLocation() + (1000.f * Start->GetForwardVector()), FColor::Green, false, 1, 0, 1);
-	m_lastfired = firerate;
-	LOG("Shoot RAY", 5.f);
-
-
-}*/
 
 void AEnemy::Collide(UActorComponent* OtherComp)
 {

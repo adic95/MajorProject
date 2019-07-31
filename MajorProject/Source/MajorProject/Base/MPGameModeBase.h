@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "Helper\Structs.h"
+#include "Player\FPSPlayerPawn.h"
 #include "MPGameModeBase.generated.h"
 
 /**
@@ -50,15 +51,28 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon")
 		TArray <TSubclassOf<AWeapon>> WeaponClass;
 
-	static  int m_killedEnemies;
-
 	
-	static int PlayerScore;
 
 
 	UFUNCTION(BlueprintCallable)
 		int GetPlayerScore();
+	
+	UFUNCTION(BlueprintCallable)
+		int GetPlayerRound();
 
+	UFUNCTION(BlueprintCallable)
+		int GetPlayerWave();
+
+	
+	
+
+
+
+
+	static  int m_killedEnemies;
+
+
+	static int PlayerScore;
 #pragma endregion
 
 protected:
@@ -87,6 +101,9 @@ private:
 	float m_enemyTimer;
 
 	float m_WeaponTimer;
+
+
+	
 #pragma endregion
 
 #pragma region private variable
@@ -102,9 +119,14 @@ private:
 
 
 	AWeapon* pWeapon;
+	AFPSPlayerPawn* pPlayer;
+	APlayerController* pPlyrcntrlr;
 
 
 #pragma endregion
+
+
+
 };
 	
 

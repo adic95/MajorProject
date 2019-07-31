@@ -63,7 +63,7 @@ public:
 		/// </summary>
 		UCameraComponent* Camera;
 
-	UPROPERTY(EditAnywhere, Category = "Player")
+	UPROPERTY(VisibleAnywhere, Category = "Player")
 		/// <summary>
 		/// collision capsule component
 		/// </summary>
@@ -131,6 +131,12 @@ public:
 		/// 
 		/// </summary>
 		float ShootRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Player")
+		/// <summary>
+		/// 
+		/// </summary>
+		int PlayerHitPoints;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player")
 		bool bGrabbed;
@@ -190,6 +196,9 @@ private:
 		/// collide with other component
 		/// </summary>
 		void Collide(UActorComponent* OtherComp);
+
+	UFUNCTION(BlueprintCallable)
+	void ChangeLevelOnPress();
 #pragma endregion
 private:
 #pragma region private function
@@ -203,4 +212,8 @@ private:
 	
 #pragma endregion
 
+
+private:
+
+	float m_timebetweenhit;
 };
